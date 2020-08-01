@@ -1,0 +1,25 @@
+.carousel-item img {
+    height: 100vh;
+}
+.banner-container {
+    position: relative;
+    margin-left: 100px;
+    font-family: "Poppins";
+    background-color: black;
+}
+.banner-text {
+    position: absolute;
+    top: 28%;
+    left: 50px;
+    z-index: 1;
+}
+.banner-subtitle{
+    letter-spacing: 20px;
+}
+.banner-description{
+    width: 50%;
+    font-size: 12px;
+    color: #e1e1e1;
+    line-height: 20px;
+    letter-spacing: 0px;
+}

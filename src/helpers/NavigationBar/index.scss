@@ -1,0 +1,13 @@
+.navigation{
+    width:100px;
+    z-index: 1;
+    position: fixed;
+    left: 0;
+    background-color:#fff;
+    &__body{
+        height: 95vh;
+    }
+    &__logo{
+        width:100px;
+    }
+}

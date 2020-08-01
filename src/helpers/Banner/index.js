@@ -1,0 +1,43 @@
+import React from 'react';
+import Button from '../Button';
+import image2 from '../../assets/images/andaman.jpg';
+import image1 from '../../assets/images/andaman1.png';
+import './index.scss';
+
+const Banner = () => {
+  return (
+    <div className="banner-container">
+      <div className="carousel slide carousel-fade" data-ride="carousel" data-pause="false">
+        <ol className="carousel-indicators">
+          <li data-slide-to="0" />
+          <li data-slide-to="1" />
+        </ol>
+        <div className="carousel-inner">
+          <div className="carousel-item active">
+            <img className="w-100 d-block" src={image1} alt="image1"/>
+          </div>
+          <div className="carousel-item">
+            <img className="w-100 d-block" src={image2} alt="image2"/>
+          </div>
+        </div>
+      </div>
+      <div className="banner-text">
+        <h1 className="display-1 text-white text-uppercase font-weight-bold"> andaman </h1>
+        <h4 className="banner-subtitle text-white pt-2 pb-2"> Island Paradise </h4>
+        <h6 className="banner-description"> 
+          is an Indian group of islands in the Bay of Bengal. 
+          These rough 300 known for their plam-lined,white-sand 
+          beaches,mangroves and tropical rain-forest.caral reefs 
+          supporting marine life such as shark and rays make for 
+          popular diving and snarkelling sites. over the years , 
+          andaman is turning out to be one of the famous tourist destination 
+        </h6>
+        <div className="pt-3">
+          <Button title="Know More" type="dark"></Button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Banner;

@@ -1,0 +1,15 @@
+version: '3.3'
+
+services:
+  web:
+    image: node:latest
+    container_name: next-wanderlust
+    working_dir: /next-wanderlust
+    volumes:
+        - .:/next-wanderlust
+    command: bash -c "npm install && npm start"
+    ports:
+      - '3000:3000'
+    expose:
+      - '3000'
+      

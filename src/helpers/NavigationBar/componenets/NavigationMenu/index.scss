@@ -1,0 +1,10 @@
+.navigationMenu{
+    color: #000;
+    height: 300px;
+    .icons{
+        font-size: 18px;
+        &:not(:last-child){
+            padding-bottom: 65%;
+        }
+    }
+}
