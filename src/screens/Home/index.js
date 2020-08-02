@@ -8,7 +8,6 @@ const Home = () => {
   return (
     <div className='home-page d-flex flex-row'>
       <NavigationBar setMenuState={setMenuState} isMenuOpen={isMenuOpen}/>
-      {/* <MenuBar/>  */}
       <Banner />
     </div>
   );

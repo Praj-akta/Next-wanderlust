@@ -3,8 +3,12 @@
     height: 300px;
     .icons{
         font-size: 18px;
+        cursor: pointer;
         &:not(:last-child){
             padding-bottom: 65%;
         }
+    }
+    .font-22{
+        font-size: 22px;
     }
 }
