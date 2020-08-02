@@ -1,6 +1,6 @@
 .navigation{
     width:100px;
-    z-index: 1;
+    z-index: 3;
     position: fixed;
     left: 0;
     background-color:#fff;
@@ -9,5 +9,7 @@
     }
     &__logo{
         width:100px;
+        position: relative;
+        left: -14px;
     }
 }
