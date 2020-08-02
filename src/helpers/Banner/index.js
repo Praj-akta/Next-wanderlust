@@ -7,10 +7,10 @@ import './index.scss';
 const Banner = () => {
   return (
     <div className="banner-container">
-      <div className="carousel slide carousel-fade" data-ride="carousel" data-pause="false">
+      <div id="bannerCarouselIndicators" className="carousel slide carousel-fade" data-ride="carousel" data-pause="false">
         <ol className="carousel-indicators">
-          <li data-slide-to="0" />
-          <li data-slide-to="1" />
+          <li data-target="#bannerCarouselIndicators" data-slide-to="0" className="active" />
+          <li data-target="#bannerCarouselIndicators" data-slide-to="1" />
         </ol>
         <div className="carousel-inner">
           <div className="carousel-item active">
