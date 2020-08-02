@@ -1,9 +1,16 @@
 .about-us-container {
     margin-left: 100px;
+    overflow-y: scroll;
     font-family: "Poppins";
 }
-.breadcrumbs{
+.font-size-12{
     font-size: 12px;
+}
+.font-size-14 {
+    font-size: 14px;
+}
+.options-div {
+    width: 300px;
 }
 .about-us-header {
     box-shadow: (0 0 12px rgba(129,129,129,0.11));

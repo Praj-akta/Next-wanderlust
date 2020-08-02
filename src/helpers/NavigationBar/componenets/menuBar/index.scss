@@ -1,0 +1,25 @@
+.menuBar{
+    height: 100vh;
+    padding-left: 10%;
+    padding-right: 20%;
+    background-color: #fff;
+    position: absolute;
+    left: 100px;
+    z-index: 2;
+    animation: moveInLeft 0.5s ease-out;
+    font-size: 30px;
+    line-height: 27px;
+    color: #000000;
+    font-weight: 400;
+    font-family: "Poppins";
+    }
+
+
+@keyframes moveInLeft {
+    0% {
+        transform: translateX(-10rem);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
