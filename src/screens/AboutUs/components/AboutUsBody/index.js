@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import quickBookingImg from '../../../../assets/images/quick-booking.png';
 import wonderfulPlacesImg from '../../../../assets/images/world-of-places.png';
 import availablePlacesImg from '../../../../assets/images/always-available.png';
@@ -51,12 +52,14 @@ const AboutUsBody = () => {
             <div className="pt-4 pl-5 pb-4 about-us-header">
                 <h3 className="text-dark m-0"> About Next Wanderlust </h3>
                 <div className="font-size-12"> 
-                    <span className="text-dark"> Home </span> 
+                    <Link to="/">
+                        <span className="text-dark"> Home </span> 
+                    </Link>
                     <span>{">"}</span>
                     <span className="text-secondary"> About Us </span> 
                 </div>
             </div>
-            <div className="next-wanderlust-intro pt-5 pl-5">
+            <div className="next-wanderlust-intro pt-5 px-5">
                 <div className="display-1 text-uppercase pb-2 font-weight-bolder text-white bg-image"> 
                     Next wanderlust
                 </div>
@@ -69,11 +72,11 @@ const AboutUsBody = () => {
                     with an aim to provide you the best.
                 </div>
             </div>
-            <div className="d-flex w-75 flex-wrap  align-items-center text-center justify-content-around p-5 mb-5">
+            <div className="d-flex w-100 flex-wrap justify-content-around p-5 mb-5">
                 {
                     options.map(({imgSrc, title, description}, index) => {
                         return (
-                            <div className="text-center font-size-14 options-div pt-3 pb-5" key={index}>
+                            <div className="text-center font-size-14 options-div pt-3 mb-5" key={index}>
                                 <div className="h-50"> 
                                     <img src={imgSrc} alt={imgSrc ? title : null} className="h-100"/> 
                                 </div>
