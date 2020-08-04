@@ -3,7 +3,7 @@ import './index.scss';
 
 const MenuBar = ({setMenuState , isMenuOpen}) => {
   return (
-    <div className=" menuBar d-flex flex-column justify-content-center">
+    <div className=" menuBar d-flex flex-column justify-content-center shadow">
       <div className='py-4 text-uppercase menu-option' >About Us</div>
       <div className='py-4 text-uppercase menu-option'>Tour destination</div>
       <div className='py-4 text-uppercase menu-option'>blog</div>
