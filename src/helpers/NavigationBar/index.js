@@ -22,8 +22,7 @@ const NavigationBar = ({setMenuState, isMenuOpen}) => {
         </div>
         <Footer />
       </div>
-      {isMenuOpen && <MenuBar />}
-      
+      {isMenuOpen && <MenuBar setMenuState={setMenuState} isMenuOpen={isMenuOpen}/>}
     </React.Fragment>
     
   );

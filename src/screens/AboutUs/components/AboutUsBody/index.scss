@@ -27,3 +27,28 @@
         -webkit-text-fill-color: transparent; 
     }
 }
+
+.toggle-btn {
+    padding: 0;
+    border: none;
+    font-size: 35px;
+    background: none;
+}
+
+.toggle-btn:focus {
+    border: none;
+    outline: none;
+}
+.faq-list {
+    border-bottom: 1px solid lightgray;
+}
+.bg-color {
+    background: #c9f6ff;
+}
+
+.display-block {
+    display: block;
+}
+.hide-block{
+    display: none;
+}

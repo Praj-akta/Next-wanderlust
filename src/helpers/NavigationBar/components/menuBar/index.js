@@ -3,7 +3,9 @@ import { withRouter } from 'react-router-dom';
 import './index.scss';
 
 const MenuBar = ({
-  history
+  history,
+  isMenuOpen,
+  setMenuState
 }) => {
   const list = [
     { id: 1, displayName: "About us" },
@@ -16,6 +18,7 @@ const MenuBar = ({
   const navigateOnClick = (displayName) => {
     if(displayName === "About us"){
       history.push('/about');
+      setMenuState(!isMenuOpen);
     }
   }
   return (

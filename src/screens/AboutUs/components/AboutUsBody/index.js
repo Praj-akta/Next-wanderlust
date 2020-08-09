@@ -6,7 +6,12 @@ import availablePlacesImg from '../../../../assets/images/always-available.png';
 import oneStopSolutionImg from '../../../../assets/images/one-stop-solution.png';
 import './index.scss';
 
-const AboutUsBody = () => {
+const AboutUsBody = ({
+    toggleId,
+    setToggleId,
+    isToggleOpen,
+    setToggleState
+}) => {
     const options = [
         {
             imgSrc: oneStopSolutionImg,
@@ -46,39 +51,81 @@ const AboutUsBody = () => {
             provided. Our aim is not to build satisfied customers, our aim is to have loyal customers who 
             trust us with all their travel needs.`
         }
-    ]
+    ];
+
+    const faqsList = [
+        {
+            id: "title1",
+            title: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
+            description: `Lorem Ipsum is simply dummy text of the printing and typesetting 
+                industry. Lorem Ipsum has been the industry's standard dummy text ever since 
+                the 1500s, when an unknown printer took a galley of type and scrambled it to 
+                make a type specimen book.`
+        },
+        {
+            id: "title2",
+            title: "Lorem ipsum dolor sit amet,?",
+            description: `Lorem Ipsum is simply dummy text of the printing and typesetting 
+                industry. Lorem Ipsum has been the industry's standard dummy text ever since 
+                the 1500s, when an unknown printer took a galley of type and scrambled it to 
+                make a type specimen book.`
+        },
+        {
+            id: "title3",
+            title: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
+            description: `Lorem Ipsum is simply dummy text of the printing and typesetting 
+                industry. Lorem Ipsum has been the industry's standard dummy text ever since 
+                the 1500s, when an unknown printer took a galley of type and scrambled it to 
+                make a type specimen book.`
+        },
+        {
+            id: "title4",
+            title: "Lorem ipsum dolor sit amet,?",
+            description: `Lorem Ipsum is simply dummy text of the printing and typesetting 
+                industry. Lorem Ipsum has been the industry's standard dummy text ever since 
+                the 1500s, when an unknown printer took a galley of type and scrambled it to 
+                make a type specimen book.`
+        }
+    ];
+
+    const onClickToggle = (id) => {
+        toggleId[id] = !toggleId[id];
+        setToggleId(toggleId);
+        setToggleState(!isToggleOpen);
+    }
+
     return (
         <div className="about-us-container w-100">
             <div className="pt-4 pl-5 pb-4 about-us-header">
                 <h3 className="text-dark m-0"> About Next Wanderlust </h3>
-                <div className="font-size-12"> 
+                <div className="font-size-12">
                     <Link to="/">
-                        <span className="text-dark"> Home </span> 
+                        <span className="text-dark"> Home </span>
                     </Link>
                     <span>{">"}</span>
-                    <span className="text-secondary"> About Us </span> 
+                    <span className="text-secondary"> About Us </span>
                 </div>
             </div>
             <div className="next-wanderlust-intro pt-5 px-5">
-                <div className="display-1 text-uppercase pb-2 font-weight-bolder text-white bg-image"> 
+                <div className="display-1 text-uppercase pb-2 font-weight-bolder text-white bg-image">
                     Next wanderlust
                 </div>
                 <div className="font-weight-normal">
                     Why choose Next Wanderlust?
                 </div>
                 <div className="w-50 text-secondary font-size-12">
-                    In a world full of established travel firms who charge a heavy 
-                    price for your vacations, Next Wanderlust is a budding organization 
+                    In a world full of established travel firms who charge a heavy
+                    price for your vacations, Next Wanderlust is a budding organization
                     with an aim to provide you the best.
                 </div>
             </div>
-            <div className="d-flex w-100 flex-wrap justify-content-around p-5 mb-5">
+            <div className="d-flex w-100 flex-wrap justify-content-around p-5">
                 {
-                    options.map(({imgSrc, title, description}, index) => {
+                    options.map(({ imgSrc, title, description }, index) => {
                         return (
                             <div className="text-center font-size-14 options-div pt-3 mb-5" key={index}>
-                                <div className="h-50"> 
-                                    <img src={imgSrc} alt={imgSrc ? title : null} className="h-100"/> 
+                                <div className="h-50">
+                                    <img src={imgSrc} alt={imgSrc ? title : null} className="h-100" />
                                 </div>
                                 <div className="text-dark font-weight-bold py-2">
                                     {title}
@@ -91,8 +138,42 @@ const AboutUsBody = () => {
                     })
                 }
             </div>
+            <div className="d-flex justify-content-between px-5">
+                <h4 className="text-uppercase"> faq's </h4>
+                <div className="text-capitalize text-info font-weight-bold"> view all </div>
+            </div>
+            <div className="mb-5">
+                {
+                    faqsList.map(({ title, description, id }, index) => {
+                        return (
+                            <div className={toggleId[id] ? "faq-list px-5 py-3 bg-color" : "faq-list px-5 py-3"} key={index}>
+                                <div className="d-flex justify-content-between align-items-center">
+                                    <div className="title"> {title} </div>
+                                    <button type="button" className="toggle-btn" onClick={_ => onClickToggle(id)}> 
+                                        { toggleId[id] ? "-" : "+"}
+                                    </button>
+                                </div>
+                                <div className={toggleId[id] ? "display-block pb-3 text-secondary" : "hide-block"}>
+                                    {description}
+                                </div>
+                            </div>
+                        );
+                    })
+                }
+            </div>
         </div>
-    )
+        //bootstrap code using collapse
+        // <div className="d-flex justify-content-between align-items-start pb-1" key={index}>
+        //     <div>
+        //         <div className="title"> {title} </div>
+        //         <div id={id} className="collapse">
+        //             {description}
+        //         </div>
+        //     </div>
+        //     <button type="button" className="toggle-btn"
+        //         data-toggle="collapse" data-target={`#${id}`}> + </button>
+        // </div>
+    );
 }
 
 export default AboutUsBody;
