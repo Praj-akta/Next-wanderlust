@@ -5,10 +5,16 @@ import NavigationBar from '../src/helpers/NavigationBar'
 import { Route, Switch } from 'react-router-dom';
 
 export default function Main (){
+    const [menuName, setMenuName] = useState("");
     const [isMenuOpen, setMenuState] = useState(false);
         return( 
             <div className='home-page d-flex flex-row'>
-                <NavigationBar setMenuState={setMenuState} isMenuOpen={isMenuOpen}/>
+                <NavigationBar 
+                    menuName={menuName}
+                    isMenuOpen={isMenuOpen}
+                    setMenuName={setMenuName}
+                    setMenuState={setMenuState} 
+                />
                 <Switch>
                     <Route path = "/" render = {props => {
                         return <Home {...props}/>

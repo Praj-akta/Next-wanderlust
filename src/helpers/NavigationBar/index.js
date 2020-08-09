@@ -7,7 +7,12 @@ import NavigationMenu from './components/NavigationMenu';
 import logo from '../../assets/images/logo-with-title.png';
 import './index.scss';
 
-const NavigationBar = ({setMenuState, isMenuOpen}) => {
+const NavigationBar = ({
+  menuName,
+  isMenuOpen,
+  setMenuName,
+  setMenuState
+}) => {
   return (
     <React.Fragment>
         <div className="navigation shadow p-3 mb-5 bg-white rounded">
@@ -17,14 +22,18 @@ const NavigationBar = ({setMenuState, isMenuOpen}) => {
               <img className="navigation__logo" src={logo} alt="next-wanderlust"></img>
             </Link>
           </div>
-          <NavigationMenu setMenuState={setMenuState} isMenuOpen={isMenuOpen}/>
+          <NavigationMenu 
+            menuName={menuName}
+            isMenuOpen={isMenuOpen}
+            setMenuName={setMenuName}
+            setMenuState={setMenuState} 
+          />
           <SocialNetworks />
         </div>
         <Footer />
       </div>
-      {isMenuOpen && <MenuBar setMenuState={setMenuState} isMenuOpen={isMenuOpen}/>}
+      {isMenuOpen && <MenuBar setMenuState={setMenuState} isMenuOpen={isMenuOpen} menuName={menuName}/>}
     </React.Fragment>
-    
   );
 };
 

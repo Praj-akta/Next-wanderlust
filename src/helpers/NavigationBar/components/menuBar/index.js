@@ -4,6 +4,7 @@ import './index.scss';
 
 const MenuBar = ({
   history,
+  menuName,
   isMenuOpen,
   setMenuState
 }) => {
@@ -15,8 +16,19 @@ const MenuBar = ({
     { id: 5, displayName: "Privacy policy" },
     { id: 6, displayName: "faq" }
   ];
+  const contactList = [
+    {
+      id: 1,
+      title: "Address",
+      description: `Is an Indian group of islands in the Bay of Bengal. These
+      roughly 300 islands are known for their palm, 400605`
+    },
+    { id: 2, title: "Email", description: "wecare@nextwanderlust.com" },
+    { id: 3, title: "Call", description: "702 119 6719" }
+  ];
+  
   const navigateOnClick = (displayName) => {
-    if(displayName === "About us"){
+    if (displayName === "About us") {
       history.push('/about');
       setMenuState(!isMenuOpen);
     }
@@ -24,14 +36,24 @@ const MenuBar = ({
   return (
     <div className="menuBar d-flex flex-column justify-content-center shadow">
       {
-        list.map(({ displayName }, index) => {
+        menuName === "menus" && list.map(({ displayName }, index) => {
           return (
-            <div key={index} 
+            <div key={index}
               onClick={_ => navigateOnClick(displayName)}
               className='py-4 text-uppercase menu-option'>
               {displayName}
             </div>
           );
+        })
+      }
+      {
+        menuName === "contact" && contactList.map(({ title, description }, index) => {
+          return (
+            <div key={index} className="pb-5 contact-list">
+              <h3> {title} </h3>
+              <h6 className="text-secondary font-weight-normal w-75"> {description} </h6>
+            </div>
+          )
         })
       }
     </div>
