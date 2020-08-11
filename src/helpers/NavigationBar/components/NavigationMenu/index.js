@@ -2,12 +2,13 @@ import React from 'react';
 import './index.scss';
 
 const NavigationMenu = ({
+  menuName,
   isMenuOpen,
   setMenuName,
   setMenuState
 }) => {
-  const menuClass = isMenuOpen ? 'icon-clear font-22 icons' :  'icon-menu icons';
-
+  const menuClass = (isMenuOpen && menuName==="menus" )? 'icon-clear font-22 icons' :  'icon-menu icons';
+  console.log(menuName)
   const onClickMenuIcon = (iconName) => {
     setMenuName(iconName)
     setMenuState(!isMenuOpen)

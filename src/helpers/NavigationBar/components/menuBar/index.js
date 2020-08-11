@@ -51,7 +51,7 @@ const MenuBar = ({
           return (
             <div key={index} className="pb-5 contact-list">
               <h3> {title} </h3>
-              <h6 className="text-secondary font-weight-normal w-75"> {description} </h6>
+              <h6 className="text-secondary font-weight-normal"> {description} </h6>
             </div>
           )
         })
