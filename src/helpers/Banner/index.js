@@ -6,8 +6,10 @@ import './index.scss';
 
 const Banner = () => {
   return (
-    <div className="banner-container">
+    <React.Fragment>
+      <div className="banner-container ">
       <div id="bannerCarouselIndicators" className="carousel slide carousel-fade" data-ride="carousel" data-pause="false">
+      <div className="overlay"></div>
         <ol className="carousel-indicators">
           <li data-target="#bannerCarouselIndicators" data-slide-to="0" className="active" />
           <li data-target="#bannerCarouselIndicators" data-slide-to="1" />
@@ -37,6 +39,8 @@ const Banner = () => {
         </div>
       </div>
     </div>
+    </React.Fragment>
+    
   );
 };
 

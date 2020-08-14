@@ -23,8 +23,8 @@ const MenuBar = ({
       description: `Is an Indian group of islands in the Bay of Bengal. These
       roughly 300 islands are known for their palm, 400605`
     },
-    { id: 2, title: "Email", description: "wecare@nextwanderlust.com" },
-    { id: 3, title: "Call", description: "702 119 6719" }
+    { id: 2, title: "Email", description: "wecare@nextwanderlust.com" , link : "mailto:manishchaugule11@gmail.com"},
+    { id: 3, title: "Call", description: "+917021196719" , link : "tel:+917021196719"}
   ];
   
   const navigateOnClick = (displayName) => {
@@ -47,11 +47,15 @@ const MenuBar = ({
         })
       }
       {
-        menuName === "contact" && contactList.map(({ title, description }, index) => {
+        menuName === "contact" && contactList.map(({ title, description ,link}, index) => {
           return (
             <div key={index} className="pb-5 contact-list">
               <h3> {title} </h3>
-              <h6 className="text-secondary font-weight-normal"> {description} </h6>
+              {
+                title !== 'Address' 
+                  ? <a href={`${link}`}><h6 className="text-secondary font-weight-normal"> {description} </h6> </a>
+                  : <h6 className="text-secondary font-weight-normal"> {description} </h6>
+              }
             </div>
           )
         })
