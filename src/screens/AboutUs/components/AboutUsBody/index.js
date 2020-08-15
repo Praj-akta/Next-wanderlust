@@ -4,6 +4,7 @@ import quickBookingImg from '../../../../assets/images/quick-booking.png';
 import wonderfulPlacesImg from '../../../../assets/images/world-of-places.png';
 import availablePlacesImg from '../../../../assets/images/always-available.png';
 import oneStopSolutionImg from '../../../../assets/images/one-stop-solution.png';
+import customerSatisfactionImg from '../../../../assets/images/customerSatisfaction.png';
 import './index.scss';
 
 const AboutUsBody = ({
@@ -45,6 +46,7 @@ const AboutUsBody = ({
             and accommodation during your journey...`
         },
         {
+            imgSrc: customerSatisfactionImg,
             title: "Customer Satisfaction",
             description: `Our firm was formed with one goal; to ensure customer satisfaction. We are 
             Next Wanderlust always thrive to ensure you are not only satisfied but happy with the services
@@ -146,10 +148,11 @@ const AboutUsBody = ({
                 {
                     faqsList.map(({ title, description, id }, index) => {
                         return (
-                            <div className={toggleId[id] ? "faq-list px-5 py-3 bg-color" : "faq-list px-5 py-3"} key={index}>
+                            <div key={index} onClick={_ => onClickToggle(id)}
+                                className={toggleId[id] ? "faq-list px-5 py-3 bg-color" : "faq-list px-5 py-3"}>
                                 <div className="d-flex justify-content-between align-items-center">
                                     <div className="title"> {title} </div>
-                                    <button type="button" className="toggle-btn" onClick={_ => onClickToggle(id)}> 
+                                    <button type="button" className="toggle-btn"> 
                                         { toggleId[id] ? "-" : "+"}
                                     </button>
                                 </div>

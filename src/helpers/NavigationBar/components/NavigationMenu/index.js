@@ -7,8 +7,9 @@ const NavigationMenu = ({
   setMenuName,
   setMenuState
 }) => {
-  const menuClass = (isMenuOpen && menuName==="menus" )? 'icon-clear font-22 icons' :  'icon-menu icons';
-  console.log(menuName)
+  const menuClass = (isMenuOpen && menuName==="menus") 
+    ? 'icon-clear font-22 icons' :  'icon-menu icons';
+
   const onClickMenuIcon = (iconName) => {
     setMenuName(iconName)
     setMenuState(!isMenuOpen)

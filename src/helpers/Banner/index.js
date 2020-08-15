@@ -4,7 +4,7 @@ import image2 from '../../assets/images/andaman.jpg';
 import image1 from '../../assets/images/andaman1.png';
 import './index.scss';
 
-const Banner = () => {
+const Banner = ({ history }) => {
   return (
     <React.Fragment>
       <div className="banner-container ">
@@ -35,7 +35,7 @@ const Banner = () => {
           andaman is turning out to be one of the famous tourist destination 
         </h6>
         <div className="pt-3">
-          <Button title="Know More" type="dark"></Button>
+          <Button title="Know More" type="dark" onClick={_ => history.push('/details')}/>
         </div>
       </div>
     </div>

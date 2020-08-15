@@ -15,24 +15,30 @@ const NavigationBar = ({
 }) => {
   return (
     <React.Fragment>
-        <div className="navigation shadow p-3 mb-5 bg-white rounded">
+      <div className="navigation shadow p-3 mb-5 bg-white rounded">
         <div className="d-flex flex-column justify-content-between navigation__body">
           <div className="logo pt-4">
             <Link to="/">
               <img className="navigation__logo" src={logo} alt="next-wanderlust"></img>
             </Link>
           </div>
-          <NavigationMenu 
+          <NavigationMenu
             menuName={menuName}
             isMenuOpen={isMenuOpen}
             setMenuName={setMenuName}
-            setMenuState={setMenuState} 
+            setMenuState={setMenuState}
           />
           <SocialNetworks />
         </div>
         <Footer />
       </div>
-      {isMenuOpen && <MenuBar setMenuState={setMenuState} isMenuOpen={isMenuOpen} menuName={menuName}/>}
+      {
+        isMenuOpen &&
+        <MenuBar
+          menuName={menuName}
+          isMenuOpen={isMenuOpen}
+          setMenuState={setMenuState} />
+      }
     </React.Fragment>
   );
 };
