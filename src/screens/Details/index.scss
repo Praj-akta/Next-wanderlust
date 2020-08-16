@@ -1,6 +1,5 @@
 .details-page {
     margin-left: 100px;
-    font-family: "Poppins";
 }
 .heading {
     letter-spacing: 1px;
@@ -12,6 +11,20 @@
     }
 }
 .tabs {
-    width: 65%;
+    width: 70%;
+    cursor: pointer;
     box-shadow: 0 3px 6px -6px black;
+}
+.tab {
+    width: 25%;
+    text-align: center;
+}
+.active {
+    border-bottom: 3px solid;
+}
+.pdf-btn {
+    border-radius: 15px;
+    padding: 3px 15px;
+    background-color: #fff;
+    border: 1px solid black;
 }

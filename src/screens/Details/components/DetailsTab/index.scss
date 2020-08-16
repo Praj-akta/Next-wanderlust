@@ -1,0 +1,63 @@
+.header {
+    color: #000;
+    font-size: 18px;
+}
+.form-toggle-btn {
+    width: 50px;
+    height: 50px;
+    right: 0;
+    top: 320px;
+    cursor: pointer;
+    position: absolute;
+    border-radius: 10px;
+    background-color: #e3f7ff;
+    h1 {
+        position: absolute;
+        left: 15px;
+    }
+}
+.form {
+    position: absolute;
+    top: 365px;
+    right: 0;
+    width: 350px;
+    background-color: #e3f7ff;
+    input {
+        width: 300px;
+        height: 35px;
+        padding: 0 15px;
+        font-size: 14px;
+        border-radius: 5px;
+        background: transparent;
+        border: 1px solid #6c757d;
+        &:active, &:focus {
+           outline: none;
+        }
+    }
+    .form-fields {
+        position: relative;
+    }
+    label {
+        left: 10px;
+        top: -9px;
+        color: #000;    
+        font-size: 12px;
+        padding: 0 4px;
+        position: absolute;
+        background-color: #e3f7ff;
+    }
+    .book-now-btn {
+        padding: 8px 20px;
+        font-size: 16px;
+    }
+}
+.content, .warning {
+    font-size: 14px;
+}
+.fig-captions {
+    font-size: 14px;
+    color: #5a5a5a;
+}
+table {
+    border: 1px solid #dee2e6 !important;
+}

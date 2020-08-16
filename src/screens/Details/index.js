@@ -1,15 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Photos from './components/Photos';
+import Location from './components/Location';
+import Itinerary from './components/Itinerary';
+import DetailsTab from './components/DetailsTab';
 import filledStars from '../../assets/images/filled-stars.png';
 import emptyStars from '../../assets/images/unfilled-stars.png';
 import './index.scss';
 
 const Details = () => {
+    const [selectedTab, onClickTab] = useState(1);
+
     const tabs = [
-        { id: 1, name: "Details"},
-        { id: 2, name: "Itinerary"},
-        { id: 3, name: "Location"},
-        { id: 4, name: "Photos"}
+        { id: 1, name: "Details" },
+        { id: 2, name: "Itinerary" },
+        { id: 3, name: "Location" },
+        { id: 4, name: "Photos" }
     ];
+
+    const getSelectedTabComponent = (id) => {
+        switch (id) {
+            case 1:
+                return <DetailsTab />
+            case 2:
+                return <Itinerary />
+            case 3:
+                return <Location />
+            case 4:
+                return <Photos />
+            default:
+                break;
+        }
+    }
 
     return (
         <div className="details-page w-100">
@@ -19,11 +40,11 @@ const Details = () => {
                     <h3 className="m-0"> &#8377; 15,000/ Person</h3>
                 </div>
                 <div className="mb-3 rating-stars">
-                    <img src={filledStars} className="mr-2" alt="rating-stars"/>
-                    <img src={filledStars} className="mr-2" alt="rating-stars"/>
-                    <img src={filledStars} className="mr-2" alt="rating-stars"/>
-                    <img src={filledStars} className="mr-2" alt="rating-stars"/>
-                    <img src={emptyStars} alt="rating-stars"/>
+                    <img src={filledStars} className="mr-2" alt="rating-stars" />
+                    <img src={filledStars} className="mr-2" alt="rating-stars" />
+                    <img src={filledStars} className="mr-2" alt="rating-stars" />
+                    <img src={filledStars} className="mr-2" alt="rating-stars" />
+                    <img src={emptyStars} alt="rating-stars" />
                 </div>
                 <div className="font-size-12">
                     <span className="text-dark"> Home </span>
@@ -33,13 +54,24 @@ const Details = () => {
                     <span className="text-secondary"> Andaman - India's Island Paradise </span>
                 </div>
             </div>
-            <div className="mx-5 tabs d-flex justify-content-around mt-5">
+            <div className="mx-5">
+                <div className="mt-5 d-flex justify-content-between">
+                    <div className="tabs d-flex justify-content-around">
+                        {
+                            tabs.map(({ id, name }, index) => {
+                                return (
+                                    <div key={index} onClick={_ => onClickTab(id)}
+                                        className={selectedTab === id ? "active tab" : "tab"}>
+                                        {name}
+                                    </div>
+                                );
+                            })
+                        }
+                    </div>
+                    <button type="button" className="pdf-btn"> Download Pdf </button>
+                </div>
                 {
-                    tabs.map(({ id, name}, index) => {
-                        return(
-                            <div key={index}> {name} </div>
-                        );
-                    })
+                    getSelectedTabComponent(selectedTab)
                 }
             </div>
         </div>

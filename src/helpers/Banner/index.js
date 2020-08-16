@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from '../Button';
+import image3 from '../../assets/images/banner_.png';
 import image2 from '../../assets/images/andaman.jpg';
 import image1 from '../../assets/images/andaman1.png';
 import './index.scss';
@@ -13,10 +14,14 @@ const Banner = ({ history }) => {
         <ol className="carousel-indicators">
           <li data-target="#bannerCarouselIndicators" data-slide-to="0" className="active" />
           <li data-target="#bannerCarouselIndicators" data-slide-to="1" />
+          <li data-target="#bannerCarouselIndicators" data-slide-to="2" />
         </ol>
         <div className="carousel-inner">
           <div className="carousel-item active">
             <img className="w-100 d-block" src={image1} alt="image1"/>
+          </div>
+          <div className="carousel-item">
+            <img className="w-100 d-block" src={image3} alt="image3"/>
           </div>
           <div className="carousel-item">
             <img className="w-100 d-block" src={image2} alt="image2"/>
