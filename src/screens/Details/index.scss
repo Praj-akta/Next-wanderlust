@@ -5,7 +5,7 @@
     letter-spacing: 1px;
 }
 .details-page-header {
-    box-shadow: (0 0 12px rgba(129,129,129,0.11));
+    box-shadow: (0 0 12px rgba(129, 129, 129, 0.11));
     .text-dark {
         color: #000 !important;
     }
@@ -27,4 +27,128 @@
     padding: 3px 15px;
     background-color: #fff;
     border: 1px solid black;
+}
+.begin-your-journey {
+    width: 190px;
+    color: #fff;
+    position: absolute;
+    right: -73px;
+    top: 625px;
+    font-size: 16px;
+    text-align: center;
+    padding: 8px 15px;
+    background: #000;
+    transform: rotate(270deg);
+}
+.review-form-container {
+    position: relative;
+    height: 605px;
+    background-repeat: no-repeat;
+    background: url("../../assets/images/Layer\ 3.png");
+}
+.leave-a-review {
+    position: absolute;
+    width: 624px;
+    height: 605px;
+    color: #fff;
+    &__form {
+        .form-fields {
+            position: relative;
+            padding-bottom: 35px;
+            label {
+                font-size: 12px;
+                position: absolute;
+                top: -8px;
+                left: 10px;
+                padding: 0 5px;
+            }
+            input, textarea {
+                width: 100%;
+                color: #fff;
+                outline: none;
+                font-size: 14px;
+                border-radius: 5px;
+                padding: 10px 13px;
+                background: transparent;
+                border: 1px solid rgb(156, 155, 155);
+            }
+            textarea {
+                height: 150px;
+            }
+        }
+        .submit-btn {
+            font-size: 16px;
+            padding: 10px 35px;
+        }
+    }
+}
+.opacity {
+    position: absolute;
+    width: 624px;
+    height: 605px;
+    opacity: 0.7;
+    background: #000;
+}
+.reviews-list {
+    width: 85%;
+    font-size: 15px;
+    margin: 0 auto;
+    .review {
+        border: 1px solid #6c757d;
+        img {
+            width: 100px;
+            position: relative;
+            top: -65px;
+            background: #fff;
+        }
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+        .review-description{
+            margin-top: -50px;
+        }
+    }
+}
+.similar-tours-image {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    background: url('../../assets/images/similarToursBg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    &__opacity{
+        width: 100%;
+        height: 300px;
+        background: #000;
+        opacity: 0.7;
+        position: absolute;
+    }
+    &__text {
+        z-index: 2;
+        width: 35%;
+        height: 300px;
+        color: #fff;
+        border-right: 1px solid white;
+        &__days {
+            color: #e8d02e;
+            font-size: 16px;
+        }
+        &__title {
+            font-size: 24px;
+        }
+        &__description{
+            color: #e1e1e1;
+            font-size: 14px;
+        }
+        &:nth-child(2), &:nth-child(3){
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+    }
+    .view-more {
+        cursor: pointer;
+        text-decoration: underline;
+    }
 }

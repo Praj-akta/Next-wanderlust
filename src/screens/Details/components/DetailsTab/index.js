@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Button from '../../../../helpers/Button';
-import crossImg from '../../../../assets/images/cross.png';
 import hotelsImg from '../../../../assets/images/hotel.png';
 import divingImg from '../../../../assets/images/diving.png';
 import breakfastImg from '../../../../assets/images/breakfast.png';
@@ -130,13 +129,13 @@ const DetailsTab = () => {
             </div>
             <div className="form-toggle-btn" onClick={_ => onChangeFormToggle(!formToggle)}>
                 {
-                    formToggle ? <h1> <img src={crossImg} alt="cross-img" /></h1> : null
+                    formToggle ? <span className="icon-clear"/>: null
                 }
             </div>
             {
                 formToggle
                 ? (
-                    <div className="form px-4 py-5">
+                    <div className="form pl-4 py-5">
                         <div className="form-fields mb-5">
                             <label> Name </label>
                             <input type="text" />
