@@ -41,6 +41,8 @@
     position: absolute;
     right: -73px;
     top: 625px;
+    z-index: 2;
+    cursor: pointer;
     font-size: 16px;
     text-align: center;
     padding: 8px 15px;
@@ -50,8 +52,8 @@
 .review-form-container {
     position: relative;
     height: 605px;
-    background-repeat: no-repeat;
     background: url("../../assets/images/Layer\ 3.png");
+    background-repeat: no-repeat;
 }
 .leave-a-review {
     position: absolute;
@@ -73,6 +75,8 @@
                 top: -8px;
                 left: 10px;
                 padding: 0 5px;
+                border-radius: 15px;
+                background-color: rgba(15, 15, 15, 0.699);
             }
             input, textarea {
                 width: 100%;

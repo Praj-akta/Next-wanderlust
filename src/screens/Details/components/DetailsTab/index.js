@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import Button from '../../../../helpers/Button';
+import React from 'react';
 import hotelsImg from '../../../../assets/images/hotel.png';
 import divingImg from '../../../../assets/images/diving.png';
 import breakfastImg from '../../../../assets/images/breakfast.png';
@@ -7,25 +6,24 @@ import portBlairImg from '../../../../assets/images/portBlair.png';
 import './index.scss';
 
 const DetailsTab = () => {
-    const [formToggle, onChangeFormToggle] = useState(false);
 
     const facilitiesIncludedImages = [{
-            imgSrc: hotelsImg,
-            caption: "Hotel"
-        },{
-            imgSrc: breakfastImg,
-            caption: "Breakfast"
-        }, {
-            imgSrc: portBlairImg,
-            caption: "Port Blair"
-        }, {
-            imgSrc: divingImg,
-            caption: "Scuba Diving"
-        }   
+        imgSrc: hotelsImg,
+        caption: "Hotel"
+    }, {
+        imgSrc: breakfastImg,
+        caption: "Breakfast"
+    }, {
+        imgSrc: portBlairImg,
+        caption: "Port Blair"
+    }, {
+        imgSrc: divingImg,
+        caption: "Scuba Diving"
+    }
     ];
     const estimatedExpenses = [
         {
-            tableHeaders: [ "Duration", "Budget Stay", "Standard Stay", "Premium Stay"],
+            tableHeaders: ["Duration", "Budget Stay", "Standard Stay", "Premium Stay"],
             tableContent: [
                 {
                     duration: "4D/3N",
@@ -63,29 +61,29 @@ const DetailsTab = () => {
 
     return (
         <div className="details-tab w-75">
-            <div className="d-flex align-items-center header font-weight-normal pt-5 pb-1"> 
-                <div className="mr-3">About Andaman</div> 
-                <div className="line"/>
+            <div className="d-flex align-items-center header font-weight-normal pt-5 pb-1">
+                <div className="mr-3">About Andaman</div>
+                <div className="line" />
             </div>
             <div className="content text-secondary text-justify">
-                Is an Indian group of islands in the Bay of Bengal. 
-                These roughly 300 islands are known for their palm-lined, 
-                white-sand beaches, mangroves and tropical rain-forests. 
-                Coral reefs supporting marine life such assharks and rays 
+                Is an Indian group of islands in the Bay of Bengal.
+                These roughly 300 islands are known for their palm-lined,
+                white-sand beaches, mangroves and tropical rain-forests.
+                Coral reefs supporting marine life such assharks and rays
                 make for popular diving and snorkelling sites. Over the years,
                 Andaman is turning out to be one of the famous tourist destinations.
             </div>
             <div className="facilities">
-                <div className="d-flex align-items-center header font-weight-normal pt-5 pb-2"> 
-                    <div className="mr-3">Facilities included </div> 
-                    <div className="line"/>
+                <div className="d-flex align-items-center header font-weight-normal pt-5 pb-2">
+                    <div className="mr-3">Facilities included </div>
+                    <div className="line" />
                 </div>
                 <div className="d-flex">
                     {
-                        facilitiesIncludedImages.map(({ imgSrc, caption}, index) => {
+                        facilitiesIncludedImages.map(({ imgSrc, caption }, index) => {
                             return (
                                 <div className="text-center mr-5" key={index}>
-                                    <img src={imgSrc} alt="facilities-images"/>
+                                    <img src={imgSrc} alt="facilities-images" />
                                     <div className="fig-captions pt-2"> {caption} </div>
                                 </div>
                             );
@@ -93,10 +91,10 @@ const DetailsTab = () => {
                     }
                 </div>
             </div>
-            <div className="estimated-expenses"> 
-                <div className="d-flex align-items-center header font-weight-normal pt-5 pb-3"> 
-                    <div className="mr-3"> Estimated Expenses </div> 
-                    <div className="line"/>
+            <div className="estimated-expenses">
+                <div className="d-flex align-items-center header font-weight-normal pt-5 pb-3">
+                    <div className="mr-3"> Estimated Expenses </div>
+                    <div className="line" />
                 </div>
                 <div className="table">
                     <table border="1">
@@ -118,11 +116,11 @@ const DetailsTab = () => {
                                 estimatedExpenses.map(({ tableContent }) => {
                                     return tableContent.map((value, index) => {
                                         return (
-                                            <tr key={index}> 
-                                                <td> {value.duration} </td> 
-                                                <td> {value.budgetStay} </td> 
-                                                <td> {value.standardStay} </td> 
-                                                <td> {value.premiumStay} </td> 
+                                            <tr key={index}>
+                                                <td> {value.duration} </td>
+                                                <td> {value.budgetStay} </td>
+                                                <td> {value.standardStay} </td>
+                                                <td> {value.premiumStay} </td>
                                             </tr>
                                         )
                                     })
@@ -130,47 +128,12 @@ const DetailsTab = () => {
                             }
                         </tbody>
                     </table>
-                    <div className="text-secondary py-2 warning"> 
-                        Prices are subjected to availablity. 
+                    <div className="text-secondary py-2 warning">
+                        Prices are subjected to availablity.
                         Kindly confirm the price while booking. Thanks!
                     </div>
                 </div>
             </div>
-            <div className="form-toggle-btn" onClick={_ => onChangeFormToggle(!formToggle)}>
-                {
-                    formToggle ? <span className="icon-clear"/>: null
-                }
-            </div>
-            {
-                formToggle
-                ? (
-                    <div className="form pl-4 py-5">
-                        <div className="form-fields mb-5">
-                            <label> Name </label>
-                            <input type="text" />
-                        </div>
-                        <div className="form-fields mb-5">
-                            <label> Email </label>
-                            <input type="text" />
-                        </div>
-                        <div className="form-fields mb-5">
-                            <label> No of Person </label>
-                            <input type="text" />
-                        </div>
-                        <div className="form-fields mb-5">
-                            <label> Phone </label>
-                            <input type="phone" />
-                        </div>
-                        <div className="form-fields mb-5">
-                            <label> Departure Month </label>
-                            <input type="text" />
-                        </div>
-                        <div className="text-center">
-                            <Button title="Book Now" type="dark" className="book-now-btn"/>
-                        </div>
-                    </div>
-                ) : null
-            }
         </div>
     )
 }

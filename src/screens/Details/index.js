@@ -12,6 +12,7 @@ import './index.scss';
 
 const Details = () => {
     const [selectedTab, onClickTab] = useState(1);
+    const [formToggle, onChangeFormToggle] = useState(false);
 
     const tabs = [
         { id: 1, name: "Details" },
@@ -100,9 +101,46 @@ const Details = () => {
                     getSelectedTabComponent(selectedTab)
                 }
             </div>
-            <div className="begin-your-journey text-capitalize">
+            <div className="begin-your-journey text-capitalize" 
+                onClick={_ => onChangeFormToggle(!formToggle)}>
                 begin your journey
             </div>
+            {
+                formToggle
+                    ? (
+                        <React.Fragment>
+                            <div className="form-toggle-btn">
+                                <span className="icon-clear" 
+                                    onClick={_ => onChangeFormToggle(!formToggle)}/>
+                            </div>
+                            <div className="form pl-4 py-5">
+                                <div className="form-fields mb-5">
+                                    <label> Name </label>
+                                    <input type="text" />
+                                </div>
+                                <div className="form-fields mb-5">
+                                    <label> Email </label>
+                                    <input type="text" />
+                                </div>
+                                <div className="form-fields mb-5">
+                                    <label> No of Person </label>
+                                    <input type="text" />
+                                </div>
+                                <div className="form-fields mb-5">
+                                    <label> Phone </label>
+                                    <input type="phone" />
+                                </div>
+                                <div className="form-fields mb-5">
+                                    <label> Departure Month </label>
+                                    <input type="text" />
+                                </div>
+                                <div className="text-center">
+                                    <Button title="Book Now" type="dark" className="book-now-btn" />
+                                </div>
+                            </div>
+                        </React.Fragment>
+                    ) : null
+            }
             <div className="review-form-container my-5">
                 <div className="opacity"></div>
                 <div className="leave-a-review py-4 px-5">
