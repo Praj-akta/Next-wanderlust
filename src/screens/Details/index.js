@@ -4,6 +4,7 @@ import Button from '../../helpers/Button';
 import Location from './components/Location';
 import Itinerary from './components/Itinerary';
 import DetailsTab from './components/DetailsTab';
+import RatingStars from '../../helpers/RatingStars';
 import reviewerIcon from '../../assets/images/logo.png';
 import filledStars from '../../assets/images/filled-stars.png';
 import emptyStars from '../../assets/images/unfilled-stars.png';
@@ -107,11 +108,7 @@ const Details = () => {
                 <div className="leave-a-review py-4 px-5">
                     <h3 className="text-uppercase pt-2"> leave a review </h3>
                     <div className="stars">
-                        <img src={emptyStars} alt="stars" className="mr-2" />
-                        <img src={emptyStars} alt="stars" className="mr-2" />
-                        <img src={emptyStars} alt="stars" className="mr-2" />
-                        <img src={emptyStars} alt="stars" className="mr-2" />
-                        <img src={emptyStars} alt="stars" className="mr-2" />
+                        <RatingStars />
                     </div>
                     <div className="leave-a-review__form pt-4">
                         <div className="form-fields">
@@ -140,8 +137,9 @@ const Details = () => {
                 </div>
             </div>
             <div className="customer-reviews-container px-5 pb-5">
-                <div className="header font-weight-normal">
-                    Customers Reviews
+                <div className="d-flex align-items-center header font-weight-normal">
+                    <div className="mr-3">Customers Reviews</div> 
+                    <div className="line"/>
                 </div>
                 <div className="d-flex reviews-list text-center mt-5">
                     {
@@ -163,8 +161,9 @@ const Details = () => {
                 </div>
             </div>
             <div className="similar-tours-container pb-5">
-                <div className="header font-weight-normal px-5">
-                    Similar Tours
+                <div className="d-flex align-items-center header font-weight-normal px-5">
+                    <div className="mr-3">Similar Tours</div> 
+                    <div className="line"/>
                 </div>
                 <div className="similar-tours-image mt-3">
                     <div className="similar-tours-image__opacity"></div>

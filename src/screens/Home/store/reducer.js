@@ -4,9 +4,8 @@ const defaultState = {
 }
 
 export default function HomeReducer(state = defaultState, action) {
-    switch (action.type) {
-
-        default:
-                return state;
+        switch (action.type) {
+                default:
+                        return state;
         }
 }

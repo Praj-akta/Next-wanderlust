@@ -23,10 +23,17 @@
     border-bottom: 3px solid;
 }
 .pdf-btn {
-    border-radius: 15px;
     padding: 3px 15px;
+    border-radius: 15px;
     background-color: #fff;
     border: 1px solid black;
+    &:focus, &:active {
+        outline: none;
+    }
+    &:hover {
+        color: #fff;
+        background: #000;
+    }
 }
 .begin-your-journey {
     width: 190px;
@@ -51,6 +58,11 @@
     width: 624px;
     height: 605px;
     color: #fff;
+    .stars img{
+        width: 33px;
+        height: 30px;
+        cursor: pointer;
+    }
     &__form {
         .form-fields {
             position: relative;

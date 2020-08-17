@@ -1,6 +1,12 @@
 .header {
     color: #000;
     font-size: 18px;
+    .line{
+        width: 70%;
+        height: 1px;
+        opacity: 0.3;
+        background: #6c757d;
+    }
 }
 .form-toggle-btn {
     width: 50px;

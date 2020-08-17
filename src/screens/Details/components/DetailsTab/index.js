@@ -63,7 +63,10 @@ const DetailsTab = () => {
 
     return (
         <div className="details-tab w-75">
-            <div className="header font-weight-normal pt-5 pb-1"> About Andaman </div>
+            <div className="d-flex align-items-center header font-weight-normal pt-5 pb-1"> 
+                <div className="mr-3">About Andaman</div> 
+                <div className="line"/>
+            </div>
             <div className="content text-secondary text-justify">
                 Is an Indian group of islands in the Bay of Bengal. 
                 These roughly 300 islands are known for their palm-lined, 
@@ -73,7 +76,10 @@ const DetailsTab = () => {
                 Andaman is turning out to be one of the famous tourist destinations.
             </div>
             <div className="facilities">
-                <div className="header font-weight-normal pt-5 pb-2"> Facilities included </div>
+                <div className="d-flex align-items-center header font-weight-normal pt-5 pb-2"> 
+                    <div className="mr-3">Facilities included </div> 
+                    <div className="line"/>
+                </div>
                 <div className="d-flex">
                     {
                         facilitiesIncludedImages.map(({ imgSrc, caption}, index) => {
@@ -88,7 +94,10 @@ const DetailsTab = () => {
                 </div>
             </div>
             <div className="estimated-expenses"> 
-                <div className="header font-weight-normal pt-5 pb-3"> Estimated Expenses </div>
+                <div className="d-flex align-items-center header font-weight-normal pt-5 pb-3"> 
+                    <div className="mr-3"> Estimated Expenses </div> 
+                    <div className="line"/>
+                </div>
                 <div className="table">
                     <table border="1">
                         <thead className="text-center">
