@@ -20,7 +20,6 @@ const Details = () => {
         { id: 3, name: "Location" },
         { id: 4, name: "Photos" }
     ];
-
     const customerReviews = [
         {
             id: 1,
@@ -41,6 +40,28 @@ const Details = () => {
                 last but not the least the food.`,
             reviewerName: `Alex D'souza`,
             location: "Thane, Maharashtra"
+        }
+    ];
+    const similarTours = [
+        {
+            id: 1,
+            noOfDays: 8,
+            viewMoreButton: false,
+            title: "Bhutan: The Land of Happiness",
+            description: `Bhutan Considered to be one of the happiest
+                countries in the world, it is the...`
+        },
+        {
+            id: 2,
+            noOfDays: 4,
+            viewMoreButton: true,
+            title: "Tarkarli: Sea Lover's Paradise"
+        },
+        {
+            id: 3,
+            noOfDays: 2,
+            viewMoreButton: true,
+            title: "Bhandardara: Camping Under Blanket of Stars"
         }
     ];
 
@@ -101,7 +122,7 @@ const Details = () => {
                     getSelectedTabComponent(selectedTab)
                 }
             </div>
-            <div className="begin-your-journey text-capitalize" 
+            <div className="begin-your-journey text-capitalize"
                 onClick={_ => onChangeFormToggle(!formToggle)}>
                 begin your journey
             </div>
@@ -110,8 +131,8 @@ const Details = () => {
                     ? (
                         <React.Fragment>
                             <div className="form-toggle-btn">
-                                <span className="icon-clear" 
-                                    onClick={_ => onChangeFormToggle(!formToggle)}/>
+                                <span className="icon-clear"
+                                    onClick={_ => onChangeFormToggle(!formToggle)} />
                             </div>
                             <div className="form pl-4 py-5">
                                 <div className="form-fields mb-5">
@@ -176,8 +197,8 @@ const Details = () => {
             </div>
             <div className="customer-reviews-container px-5 pb-5">
                 <div className="d-flex align-items-center header font-weight-normal">
-                    <div className="mr-3">Customers Reviews</div> 
-                    <div className="line"/>
+                    <div className="mr-3">Customers Reviews</div>
+                    <div className="line" />
                 </div>
                 <div className="d-flex reviews-list text-center mt-5">
                     {
@@ -200,36 +221,39 @@ const Details = () => {
             </div>
             <div className="similar-tours-container pb-5">
                 <div className="d-flex align-items-center header font-weight-normal px-5">
-                    <div className="mr-3">Similar Tours</div> 
-                    <div className="line"/>
+                    <div className="mr-3">Similar Tours</div>
+                    <div className="line" />
                 </div>
                 <div className="similar-tours-image mt-3">
                     <div className="similar-tours-image__opacity"></div>
                     <div className="d-flex">
-                        <div className="similar-tours-image__text p-5">
-                            <p className="similar-tours-image__text__days"> 8 days </p>
-                            <p className="similar-tours-image__text__title"> 
-                                Bhutan: The Land of Happiness
-                            </p>
-                            <p className="similar-tours-image__text__description">
-                                Bhutan Considered to be one of the happiest
-                                countries in the world, it is the...
-                            </p>
-                        </div>
-                        <div className="similar-tours-image__text p-5">
-                            <p className="similar-tours-image__text__days"> 4 days </p>
-                            <p className="similar-tours-image__text__title"> 
-                                Tarkarli: Sea Lover's Paradise
-                            </p>
-                            <p className="text-capitalize view-more"> view more </p>
-                        </div>
-                        <div className="similar-tours-image__text p-5">
-                            <p className="similar-tours-image__text__days"> 2 days </p>
-                            <p className="similar-tours-image__text__title"> 
-                                Bhandardara: Camping Under Blanket of Stars
-                            </p>
-                            <p className="text-capitalize view-more"> view more </p>
-                        </div>
+                        {
+                            similarTours.map(({ noOfDays, title, description, viewMoreButton }, index) => {
+                                return (
+                                    <div className="similar-tours-image__text p-5" key={index}>
+                                        <p className="similar-tours-image__text__days"> 
+                                            {noOfDays} days 
+                                        </p>
+                                        <p className="similar-tours-image__text__title">
+                                            {title}
+                                        </p>
+                                        {
+                                            viewMoreButton 
+                                            ? (
+                                                <p className="text-capitalize view-more">
+                                                    view more 
+                                                </p>
+                                            )
+                                            : (
+                                                <p className="similar-tours-image__text__description">
+                                                    {description}
+                                                </p>
+                                            )
+                                        }
+                                    </div>
+                                );
+                            })
+                        }
                     </div>
                 </div>
             </div>
