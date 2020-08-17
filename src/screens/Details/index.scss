@@ -1,6 +1,9 @@
 .details-page {
     margin-left: 100px;
 }
+.details-page-with-sidebar {
+    margin-left: 413px;
+}
 .heading {
     letter-spacing: 1px;
 }
@@ -50,60 +53,66 @@
     transform: rotate(270deg);
 }
 .review-form-container {
-    position: relative;
+    width: 100%;
+    z-index: -3;
     height: 605px;
+    position: relative;
     background: url("../../assets/images/Layer\ 3.png");
     background-repeat: no-repeat;
-}
-.leave-a-review {
-    position: absolute;
-    width: 624px;
-    height: 605px;
-    color: #fff;
-    .stars img{
-        width: 33px;
-        height: 30px;
-        cursor: pointer;
-    }
-    &__form {
-        .form-fields {
-            position: relative;
-            padding-bottom: 35px;
-            label {
-                font-size: 12px;
-                position: absolute;
-                top: -8px;
-                left: 10px;
-                padding: 0 5px;
-                border-radius: 15px;
-                background-color: rgba(15, 15, 15, 0.699);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    .opacity {
+        position: absolute;
+        width: 50%;
+        height: 605px;
+        opacity: 0.7;
+        z-index: 2;
+        background: #000;
+        .leave-a-review {
+            position: absolute;
+            height: 605px;
+            color: #fff;
+            z-index: 3;
+            .stars img{
+                width: 33px;
+                height: 30px;
+                cursor: pointer;
             }
-            input, textarea {
-                width: 100%;
-                color: #fff;
-                outline: none;
-                font-size: 14px;
-                border-radius: 5px;
-                padding: 10px 13px;
-                background: transparent;
-                border: 1px solid rgb(156, 155, 155);
-            }
-            textarea {
-                height: 150px;
+            &__form {
+                .form-fields {
+                    position: relative;
+                    padding-bottom: 35px;
+                    label {
+                        font-size: 12px;
+                        position: absolute;
+                        top: -8px;
+                        left: 10px;
+                        padding: 0 5px;
+                        border-radius: 15px;
+                        background-color: rgba(15, 15, 15, 0.699);
+                    }
+                    input, textarea {
+                        width: 100%;
+                        color: #fff;
+                        outline: none;
+                        font-size: 14px;
+                        border-radius: 5px;
+                        padding: 10px 13px;
+                        background: transparent;
+                        border: 1px solid rgb(156, 155, 155);
+                    }
+                    textarea {
+                        height: 150px;
+                    }
+                }
+                .submit-btn {
+                    font-size: 16px;
+                    padding: 10px 35px;
+                }
             }
         }
-        .submit-btn {
-            font-size: 16px;
-            padding: 10px 35px;
-        }
     }
-}
-.opacity {
-    position: absolute;
-    width: 624px;
-    height: 605px;
-    opacity: 0.7;
-    background: #000;
 }
 .reviews-list {
     width: 85%;

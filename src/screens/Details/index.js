@@ -10,7 +10,7 @@ import filledStars from '../../assets/images/filled-stars.png';
 import emptyStars from '../../assets/images/unfilled-stars.png';
 import './index.scss';
 
-const Details = () => {
+const Details = ({ isKnowMoreClicked }) => {
     const [selectedTab, onClickTab] = useState(1);
     const [formToggle, onChangeFormToggle] = useState(false);
 
@@ -80,8 +80,10 @@ const Details = () => {
         }
     }
 
+    const _className = isKnowMoreClicked ? "details-page-with-sidebar" : "details-page";
+
     return (
-        <div className="details-page w-100">
+        <div className={`${_className} w-100`}>
             <div className="px-5 py-4 details-page-header">
                 <div className="d-flex justify-content-between">
                     <h3 className="text-dark m-0 heading"> India's Island Paradise </h3>
@@ -163,34 +165,35 @@ const Details = () => {
                     ) : null
             }
             <div className="review-form-container my-5">
-                <div className="opacity"></div>
-                <div className="leave-a-review py-4 px-5">
-                    <h3 className="text-uppercase pt-2"> leave a review </h3>
-                    <div className="stars">
-                        <RatingStars />
-                    </div>
-                    <div className="leave-a-review__form pt-4">
-                        <div className="form-fields">
-                            <label>Your Review</label>
-                            <textarea />
+                <div className="opacity">
+                    <div className="leave-a-review py-4 px-5">
+                        <h3 className="text-uppercase pt-2"> leave a review </h3>
+                        <div className="stars">
+                            <RatingStars />
                         </div>
-                        <div className="form-fields">
-                            <label>Name</label>
-                            <input type="text" />
-                        </div>
-                        <div className="form-fields">
-                            <label>Email</label>
-                            <input type="email" />
-                        </div>
-                        <div>
-                            <input type="checkbox" />
-                            <span className="pl-2">
-                                Save my name, email, and website in this browser for the
-                                next time I comment.
+                        <div className="leave-a-review__form pt-4">
+                            <div className="form-fields">
+                                <label>Your Review</label>
+                                <textarea />
+                            </div>
+                            <div className="form-fields">
+                                <label>Name</label>
+                                <input type="text" />
+                            </div>
+                            <div className="form-fields">
+                                <label>Email</label>
+                                <input type="email" />
+                            </div>
+                            <div className="pb-3">
+                                <input type="checkbox" />
+                                <span className="pl-2">
+                                    Save my name, email, and website in this browser for the
+                                    next time I comment.
                             </span>
-                        </div>
-                        <div className="text-center mt-4">
-                            <Button type="dark" title="Submit" className="submit-btn" />
+                            </div>
+                            <div className="text-center">
+                                <Button type="dark" title="Submit" className="submit-btn" />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -231,24 +234,24 @@ const Details = () => {
                             similarTours.map(({ noOfDays, title, description, viewMoreButton }, index) => {
                                 return (
                                     <div className="similar-tours-image__text p-5" key={index}>
-                                        <p className="similar-tours-image__text__days"> 
-                                            {noOfDays} days 
+                                        <p className="similar-tours-image__text__days">
+                                            {noOfDays} days
                                         </p>
                                         <p className="similar-tours-image__text__title">
                                             {title}
                                         </p>
                                         {
-                                            viewMoreButton 
-                                            ? (
-                                                <p className="text-capitalize view-more">
-                                                    view more 
-                                                </p>
-                                            )
-                                            : (
-                                                <p className="similar-tours-image__text__description">
-                                                    {description}
-                                                </p>
-                                            )
+                                            viewMoreButton
+                                                ? (
+                                                    <p className="text-capitalize view-more">
+                                                        view more
+                                                    </p>
+                                                )
+                                                : (
+                                                    <p className="similar-tours-image__text__description">
+                                                        {description}
+                                                    </p>
+                                                )
                                         }
                                     </div>
                                 );

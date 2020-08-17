@@ -3,9 +3,14 @@ import Banner from '../../helpers/Banner';
 import { withRouter } from 'react-router-dom';
 import './index.scss';
 
-const Home = ({ history }) => {
+const Home = ({ 
+  history,
+  onClickKnowMore
+}) => {
   return (
-    <Banner history={history}/>
+    <Banner 
+      history={history} 
+      onClickKnowMore={onClickKnowMore}/>
   );
 };
 
