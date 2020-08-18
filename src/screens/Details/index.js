@@ -179,36 +179,36 @@ const Details = ({ isKnowMoreClicked }) => {
                         </React.Fragment>
                     ) : null
             }
-            <div className="review-form-container my-5">
-                <div className="opacity">
-                    <div className="leave-a-review py-4 px-5">
-                        <h3 className="text-uppercase pt-2"> leave a review </h3>
-                        <div className="stars">
-                            <RatingStars />
+            <div className="review-form-container">
+                <div className="review-form-bg-image my-5" />
+                <div className="opacity" /> 
+                <div className="leave-a-review py-4 px-5">
+                    <h3 className="text-uppercase pt-2"> leave a review </h3>
+                    <div className="stars">
+                        <RatingStars />
+                    </div>
+                    <div className="leave-a-review__form pt-4">
+                        <div className="form-fields">
+                            <label>Your Review</label>
+                            <textarea />
                         </div>
-                        <div className="leave-a-review__form pt-4">
-                            <div className="form-fields">
-                                <label>Your Review</label>
-                                <textarea />
-                            </div>
-                            <div className="form-fields">
-                                <label>Name</label>
-                                <input type="text" />
-                            </div>
-                            <div className="form-fields">
-                                <label>Email</label>
-                                <input type="email" />
-                            </div>
-                            <div className="pb-3">
-                                <input type="checkbox" />
-                                <span className="pl-2">
-                                    Save my name, email, and website in this browser for the
-                                    next time I comment.
-                        </span>
-                            </div>
-                            <div className="text-center">
-                                <Button type="dark" title="Submit" className="submit-btn" />
-                            </div>
+                        <div className="form-fields">
+                            <label>Name</label>
+                            <input type="text" />
+                        </div>
+                        <div className="form-fields">
+                            <label>Email</label>
+                            <input type="email" />
+                        </div>
+                        <div className="mb-4">
+                            <input type="checkbox" />
+                            <span className="pl-2">
+                                Save my name, email, and website in this browser for the
+                                next time I comment.
+                            </span>
+                        </div>
+                        <div className="text-center submit-btn">
+                            <Button type="dark" title="Submit"/>
                         </div>
                     </div>
                 </div>

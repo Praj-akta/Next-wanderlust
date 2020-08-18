@@ -41,7 +41,7 @@ const Banner = ({
           supporting marine life such as shark and rays make for
           popular diving and snarkelling sites. over the years ,
           andaman is turning out to be one of the famous tourist destination
-          </h6>
+        </h6>
         <div className="pt-3">
           <Button
             type="dark"
