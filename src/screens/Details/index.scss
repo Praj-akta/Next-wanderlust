@@ -2,7 +2,7 @@
     margin-left: 100px;
 }
 .details-page-with-sidebar {
-    margin-left: 413px;
+    margin-left: 410px;
 }
 .heading {
     letter-spacing: 1px;
@@ -175,5 +175,44 @@
     .view-more {
         cursor: pointer;
         text-decoration: underline;
+    }
+}
+
+//when know more button is clicked
+.banner-sidebar {
+    width: 340px;
+    height: 100%;
+    position: fixed;
+    left: 100px;
+    z-index: 3;
+    background: url('../../assets/images/banner-sidebar.png');
+    animation: moveInRight 0.4s ease-out;
+    .overlay-sidebar {
+        position: fixed;
+        width: 340px;
+        height: 100%;
+        left: 100px;
+        background-color: rgba(0,0,0,0.5);
+        z-index: 2;
+        animation: moveInRight 0.4s ease-out;
+    }
+    .display-4, &__sub-title {
+        position: relative;
+        z-index: 3;
+    }
+    &__sub-title {
+        letter-spacing: 11px;
+        font-size: 16px;
+        padding: 0 !important;
+        line-height: 0;
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        left: 150px;
+    }
+    100% {
+        left: 100px;
     }
 }

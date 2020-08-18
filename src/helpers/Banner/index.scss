@@ -40,22 +40,4 @@
     border-radius: 100%;
 }
 
-//when know more button is clicked
-.banner-sidebar {
-    width: 340px;
-    height: 100vh;
-    background: url('../../assets/images/banner_.png');
-    .overlay-sidebar {
-        width: 340px;
-    }
-    .display-4, &__sub-title {
-        position: relative;
-        z-index: 3;
-    }
-    &__sub-title {
-        letter-spacing: 11px;
-        font-size: 16px;
-        padding: 0 !important;
-        line-height: 0;
-    }
-}
+

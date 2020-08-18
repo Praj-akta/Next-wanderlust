@@ -84,6 +84,21 @@ const Details = ({ isKnowMoreClicked }) => {
 
     return (
         <div className={`${_className} w-100`}>
+            {
+                isKnowMoreClicked && (
+                    <div className="banner-sidebar">
+                        <div className="overlay-sidebar" />
+                        <div className="d-flex flex-column align-items-center justify-content-center h-100">
+                            <h3 className="display-4 text-white text-uppercase font-weight-bold">
+                                Andaman
+                            </h3>
+                            <h4 className="banner-sidebar__sub-title banner-subtitle text-white pt-2 pb-2">
+                                Island Paradise
+                            </h4>
+                        </div>
+                    </div>
+                )
+            }
             <div className="px-5 py-4 details-page-header">
                 <div className="d-flex justify-content-between">
                     <h3 className="text-dark m-0 heading"> India's Island Paradise </h3>
@@ -189,7 +204,7 @@ const Details = ({ isKnowMoreClicked }) => {
                                 <span className="pl-2">
                                     Save my name, email, and website in this browser for the
                                     next time I comment.
-                            </span>
+                        </span>
                             </div>
                             <div className="text-center">
                                 <Button type="dark" title="Submit" className="submit-btn" />
@@ -222,7 +237,7 @@ const Details = ({ isKnowMoreClicked }) => {
                     }
                 </div>
             </div>
-            <div className="similar-tours-container pb-5">
+            <div className="similar-tours-container">
                 <div className="d-flex align-items-center header font-weight-normal px-5">
                     <div className="mr-3">Similar Tours</div>
                     <div className="line" />
@@ -242,16 +257,16 @@ const Details = ({ isKnowMoreClicked }) => {
                                         </p>
                                         {
                                             viewMoreButton
-                                                ? (
-                                                    <p className="text-capitalize view-more">
-                                                        view more
-                                                    </p>
-                                                )
-                                                : (
-                                                    <p className="similar-tours-image__text__description">
-                                                        {description}
-                                                    </p>
-                                                )
+                                            ? (
+                                                <p className="text-capitalize view-more">
+                                                    view more
+                                                </p>
+                                            )
+                                            : (
+                                                <p className="similar-tours-image__text__description">
+                                                    {description}
+                                                </p>
+                                            )
                                         }
                                     </div>
                                 );

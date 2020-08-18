@@ -1,6 +1,7 @@
 .navigation{
     width:100px;
     z-index: 6;
+    position: fixed;
     left: 0;
     background-color:#fff;
     &__body{
@@ -11,9 +12,4 @@
         position: relative;
         left: -14px;
     }
-}
-.navigation-side-bar {
-    position: fixed;
-    left: 0;
-    z-index: 1;
 }

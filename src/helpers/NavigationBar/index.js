@@ -12,47 +12,29 @@ const NavigationBar = ({
   isMenuOpen,
   setMenuName,
   setMenuState,
-  onClickKnowMore,
-  isKnowMoreClicked
+  onClickKnowMore
 }) => {
   return (
     <React.Fragment>
-      <div className="navigation-side-bar d-flex flex-row">
-        <div className="navigation shadow p-3 mb-5 bg-white rounded">
-          <div className="d-flex flex-column justify-content-between navigation__body">
-            <div className="logo pt-4">
-              <Link to="/">
-                <img src={logo} 
-                  alt="next-wanderlust" 
-                  className="navigation__logo"
-                  onClick={_ => onClickKnowMore(false)}/>
-              </Link>
-            </div>
-            <NavigationMenu
-              menuName={menuName}
-              isMenuOpen={isMenuOpen}
-              setMenuName={setMenuName}
-              setMenuState={setMenuState}
-            />
-            <SocialNetworks />
+      <div className="navigation shadow p-3 mb-5 bg-white rounded">
+        <div className="d-flex flex-column justify-content-between navigation__body">
+          <div className="logo pt-4">
+            <Link to="/">
+              <img src={logo}
+                alt="next-wanderlust"
+                className="navigation__logo"
+                onClick={_ => onClickKnowMore(false)} />
+            </Link>
           </div>
-          <Footer />
+          <NavigationMenu
+            menuName={menuName}
+            isMenuOpen={isMenuOpen}
+            setMenuName={setMenuName}
+            setMenuState={setMenuState}
+          />
+          <SocialNetworks />
         </div>
-        {
-          isKnowMoreClicked && (
-            <div className="banner-sidebar">
-              <div className="overlay overlay-sidebar" />
-              <div className="d-flex flex-column align-items-center justify-content-center h-100">
-                <h3 className="display-4 text-white text-uppercase font-weight-bold">
-                  Andaman
-                </h3>
-                <h4 className="banner-sidebar__sub-title banner-subtitle text-white pt-2 pb-2">
-                  Island Paradise
-                </h4>
-              </div>
-            </div>
-          )
-        }
+        <Footer />
       </div>
       {
         isMenuOpen &&
