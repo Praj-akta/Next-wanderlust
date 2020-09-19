@@ -4,6 +4,7 @@ import About from '../src/screens/AboutUs';
 import Details from '../src/screens/Details';
 import { Route, Switch } from 'react-router-dom';
 import NavigationBar from '../src/helpers/NavigationBar';
+import TourDestinations from '../src/screens/TourDestinations';
 
 export default function Main() {
     const [menuName, setMenuName] = useState("");
@@ -31,6 +32,9 @@ export default function Main() {
                 <Route path="/details" render={props => {
                     return <Details {...props} 
                         isKnowMoreClicked={isKnowMoreClicked}/>
+                }} exact />
+                <Route path="/tourDestinations" render={props => {
+                    return <TourDestinations {...props} />
                 }} exact />
             </Switch>
         </div>

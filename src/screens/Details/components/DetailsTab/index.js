@@ -7,7 +7,8 @@ import './index.scss';
 
 const DetailsTab = () => {
 
-    const facilitiesIncludedImages = [{
+    const facilitiesIncludedImages = [
+    {
         imgSrc: hotelsImg,
         caption: "Hotel"
     }, {

@@ -41,6 +41,9 @@ const MenuBar = ({
     if (displayName === "About us") {
       history.push('/about');
       setMenuState(!isMenuOpen);
+    } else if (displayName === "Tour destination") {
+      history.push('/tourDestinations');
+      setMenuState(!isMenuOpen);
     }
   }
   return (

@@ -12,21 +12,8 @@
     max-width: 400px;
 }
 .about-us-header {
-    box-shadow: (0 0 12px rgba(129,129,129,0.11));
+    box-shadow: (0 12px 12px rgba(66, 66, 66, 0.11));
 }
-.next-wanderlust-intro {
-    .display-1 {
-        line-height: 0.75 !important;
-    }
-    .bg-image {
-        width: 670px;
-        background-image: url('../../../../assets/images/next-wanderlust-bg.png');
-        background-size: contain;
-        -webkit-background-clip: text; 
-        -webkit-text-fill-color: transparent; 
-    }
-}
-
 .toggle-btn {
     padding: 0;
     border: none;

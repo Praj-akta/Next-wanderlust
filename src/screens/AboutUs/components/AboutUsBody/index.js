@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PageHeader from '../../../../helpers/PageHeader';
 import quickBookingImg from '../../../../assets/images/quick-booking.png';
 import wonderfulPlacesImg from '../../../../assets/images/world-of-places.png';
 import availablePlacesImg from '../../../../assets/images/always-available.png';
@@ -108,14 +109,12 @@ const AboutUsBody = ({
                     <span className="text-secondary"> About Us </span>
                 </div>
             </div>
-            <div className="next-wanderlust-intro pt-5 px-5">
-                <div className="display-1 text-uppercase pb-2 font-weight-bolder text-white bg-image">
-                    Next wanderlust
-                </div>
-                <div className="font-weight-normal">
+            <div className="next-wanderlust-intro pt-5 text-center">
+                <PageHeader title="Next Wanderlust"/>
+                <div className="font-weight-normal pb-2">
                     Why choose Next Wanderlust?
                 </div>
-                <div className="w-50 text-secondary font-size-12">
+                <div className="text-secondary font-size-12 w-50 mx-auto">
                     In a world full of established travel firms who charge a heavy
                     price for your vacations, Next Wanderlust is a budding organization
                     with an aim to provide you the best.
