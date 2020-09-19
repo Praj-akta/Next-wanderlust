@@ -91,11 +91,11 @@ const TourDestination = () => {
                     </select>
                 </div>
                 <div className="d-flex align-items-center">
-                    <div className="icon-search" />
                     <input 
                         type="text" 
                         className="search"
                         placeholder="Search by keyword" />
+                    <div className="icon-search" />
                 </div>
             </div>
             <div 
