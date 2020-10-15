@@ -96,7 +96,11 @@ const AboutUs = () => {
             </div>
             <div className="d-flex justify-content-between px-5">
                 <h4 className="text-uppercase"> faq's </h4>
-                <div className="text-capitalize text-info font-weight-bold"> view all </div>
+                <Link to="/faqs">
+                    <div className="text-capitalize text-info font-weight-bold">
+                        view all 
+                    </div>
+                </Link>
             </div>
             <FaqsQuestionList />
         </div>
