@@ -18,6 +18,7 @@ const RatingStars = ({
                             [...Array(5)].map((val, index) => {
                                 return (
                                     <img 
+                                        key={index}
                                         alt="rating-stars"
                                         className="mr-2 stars"
                                         src={selectedRating !== index 

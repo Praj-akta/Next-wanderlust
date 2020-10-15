@@ -62,11 +62,12 @@ const MenuBar = ({
   const navigateOnClick = (displayName) => {
     if (displayName === "About us") {
       history.push('/about');
-      setMenuState(!isMenuOpen);
     } else if (displayName === "Tour destination") {
       history.push('/tourDestinations');
-      setMenuState(!isMenuOpen);
+    } else if (displayName === `faq's`) {
+      history.push('/faqs');
     }
+    setMenuState(!isMenuOpen);
   }
   return (
     <div className="menuBar d-flex flex-column justify-content-center shadow">
@@ -89,7 +90,7 @@ const MenuBar = ({
             return (
               <div className="d-flex flex-column align-items-center">
                 <div className="location-img"> 
-                  <img src={imgSrc} />
+                  <img src={imgSrc} alt="icons" />
                 </div>
                 <div className="image-title"> {title} </div>
               </div>
@@ -110,7 +111,7 @@ const MenuBar = ({
                           {description} 
                         </h6> 
                       </a>
-                    : <h6 className="text-secondary font-weight-normal"> 
+                    : <h6 className="text-secondary font-weight-normal w-75"> 
                         {description} 
                       </h6>
                 }

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Home from '../src/screens/Home';
+import Faqs from '../src/screens/Faqs';
 import About from '../src/screens/AboutUs';
 import Details from '../src/screens/Details';
 import { Route, Switch } from 'react-router-dom';
@@ -35,6 +36,9 @@ export default function Main() {
                 }} exact />
                 <Route path="/tourDestinations" render={props => {
                     return <TourDestinations {...props} />
+                }} exact />
+                <Route path="/faqs" render={props => {
+                    return <Faqs {...props} />
                 }} exact />
             </Switch>
         </div>

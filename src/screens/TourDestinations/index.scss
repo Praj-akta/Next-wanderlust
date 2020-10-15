@@ -70,10 +70,14 @@
         display: none;
     }
 
+    select {
+        cursor: pointer;
+    }
+
     select, input {
         &:focus{
             border: none !important;
-            outline: 2px solid #068eba !important;
+            outline: none !important;
         }
     }
 

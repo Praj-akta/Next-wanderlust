@@ -79,8 +79,8 @@ const Details = ({ isKnowMoreClicked }) => {
                 break;
         }
     }
-
-    const _className = isKnowMoreClicked ? "details-page-with-sidebar" : "details-page";
+    const _className = isKnowMoreClicked 
+        ? "details-page-with-sidebar" : "details-page";
 
     return (
         <div className={`${_className} w-100`}>
