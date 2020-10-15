@@ -17,34 +17,43 @@
 }
 .details-page-header {
     box-shadow: (0 0 12px rgba(129, 129, 129, 0.11));
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
     .text-dark {
         color: #000 !important;
     }
 }
-.tabs {
-    width: 70%;
-    cursor: pointer;
-    box-shadow: 0 3px 6px -6px black;
-}
-.tab {
-    width: 25%;
-    text-align: center;
-}
-.active {
-    border-bottom: 3px solid;
-}
-.pdf-btn {
-    padding: 3px 15px;
-    border-radius: 15px;
-    background-color: #fff;
-    border: 1px solid black;
-    &:focus,
-    &:active {
-        outline: none;
+.tabs-container {
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-between;
+    .tabs {
+        width: 70%;
+        cursor: pointer;
+        box-shadow: 0 3px 6px -6px black;
     }
-    &:hover {
-        color: #fff;
-        background: #000;
+    .tab {
+        width: 25%;
+        text-align: center;
+    }
+    .active {
+        border-bottom: 3px solid;
+    }
+    .pdf-btn {
+        padding: 3px 15px;
+        border-radius: 15px;
+        background-color: #fff;
+        border: 1px solid black;
+        &:focus,
+        &:active {
+            outline: none;
+        }
+        &:hover {
+            color: #fff;
+            background: #000;
+        }
     }
 }
 .begin-your-journey {
@@ -88,7 +97,7 @@
         width: 50%;
         height: 605px;
         color: #fff;
-        z-index: 3;
+        z-index: 2;
         .stars img {
             width: 33px;
             height: 30px;
@@ -171,6 +180,7 @@
         width: 35%;
         height: 300px;
         color: #fff;
+        padding: 20px 50px;
         border-right: 1px solid white;
         &__days {
             color: #e8d02e;
@@ -195,6 +205,9 @@
         text-decoration: underline;
     }
 }
+.mobile-pdf-btn {
+    display: none;
+}
 
 //when know more button is clicked
 .banner-sidebar {
@@ -204,6 +217,7 @@
     left: 100px;
     z-index: 3;
     background: url("../../assets/images/banner-sidebar.png");
+    background-size: cover;
     animation: moveInRight 0.4s ease-out;
     .overlay-sidebar {
         position: fixed;
@@ -233,5 +247,89 @@
     }
     100% {
         left: 100px;
+    }
+}
+
+
+//media query
+@media screen and (max-width: 992px) {
+    .banner-sidebar, .overlay-sidebar {
+        width: 100% !important;
+        height: 300px !important;
+    }
+    .banner-sidebar {
+        animation: none;
+        .display-4 {
+            left: -50px;
+        }
+        &__sub-title {
+            left: -40px;
+        }
+    }
+    .details-page-header {
+        margin-top: 300px;
+        &__container {
+            flex-direction: column;
+            .price {
+                padding: 10px 0;
+            }
+        }
+    }
+    .details-page-with-sidebar {
+        margin-left: 100px;
+        .review-form-container .leave-a-review {
+            left: 0;
+        }
+    }
+    .tabs-container {
+        margin-top: 10px;
+        .tabs {
+            width: 100%;
+            flex-direction: column;
+        }
+        .tab {
+            width: 100%;
+            padding: 10px;
+            border-top: none;
+            border: 1px solid black;
+        }
+        .active {
+            padding: 10px;
+            color: white;
+            background: black;
+        }
+    }
+    .mobile-pdf-btn {
+        display: block;
+        padding: 3px 15px;
+        border-radius: 15px;
+        background-color: #fff;
+        border: 1px solid black;
+        &:focus,
+        &:active {
+            outline: none;
+        }
+        &:hover {
+            color: #fff;
+            background: #000;
+        }
+    }
+    .pdf-btn, .breadcrumbs {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .details-page-with-sidebar {
+        .review-form-container {
+            .leave-a-review, .opacity {
+                width: 100%;
+            }
+        }
+    }
+    .similar-tours-image{
+        &__text{
+            padding: 20px;
+        }
     }
 }

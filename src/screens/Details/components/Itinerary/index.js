@@ -147,15 +147,15 @@ const Itinerary = () => {
     ];
 
     return (
-        <div className="itineray-container mt-5">
+        <div className="mt-5">
             {
                 itinerarys.map((value, index) => {
                     let modifiedClass = value.align === "right" 
-                        ? "flex-row-reverse pr-3" : "left-class";
+                        ? "right-class pr-3" : "left-class";
                     let contentClass = value.align === "right" 
                         ? "text-right" : "text-left w-75 ml-5";
                     return (
-                        <div className={`d-flex align-items-center pb-4 ${modifiedClass}`} key={index}>
+                        <div className={`itinerary-container pb-4 ${modifiedClass}`} key={index}>
                             <div className={`itinerary-heading`}>
                                 <div className="title"> {value.title} </div>
                                 <div className="text-secondary pt-3 px-2 sub-title"> 

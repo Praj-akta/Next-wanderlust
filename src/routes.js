@@ -31,8 +31,7 @@ export default function Main() {
                     return <About {...props} />
                 }} exact />
                 <Route path="/details" render={props => {
-                    return <Details {...props} 
-                        isKnowMoreClicked={isKnowMoreClicked}/>
+                    return <Details {...props} />
                 }} exact />
                 <Route path="/tourDestinations" render={props => {
                     return <TourDestinations {...props} />

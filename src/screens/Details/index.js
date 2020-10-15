@@ -10,7 +10,7 @@ import filledStars from '../../assets/images/filled-stars.png';
 import emptyStars from '../../assets/images/unfilled-stars.png';
 import './index.scss';
 
-const Details = ({ isKnowMoreClicked }) => {
+const Details = () => {
     const [selectedTab, onClickTab] = useState(1);
     const [formToggle, onChangeFormToggle] = useState(false);
 
@@ -79,30 +79,25 @@ const Details = ({ isKnowMoreClicked }) => {
                 break;
         }
     }
-    const _className = isKnowMoreClicked 
-        ? "details-page-with-sidebar" : "details-page";
+    const _className =  "details-page-with-sidebar";
 
     return (
         <div className={`${_className} w-100`}>
-            {
-                isKnowMoreClicked && (
-                    <div className="banner-sidebar">
-                        <div className="overlay-sidebar" />
-                        <div className="d-flex flex-column align-items-center justify-content-center h-100">
-                            <h3 className="display-4 text-white text-uppercase font-weight-bold">
-                                Andaman
-                            </h3>
-                            <h4 className="banner-sidebar__sub-title banner-subtitle text-white pt-2 pb-2">
-                                Island Paradise
-                            </h4>
-                        </div>
-                    </div>
-                )
-            }
+            <div className="banner-sidebar">
+                <div className="overlay-sidebar" />
+                <div className="d-flex flex-column align-items-center justify-content-center h-100">
+                    <h3 className="display-4 text-white text-uppercase font-weight-bold">
+                        Andaman
+                    </h3>
+                    <h4 className="banner-sidebar__sub-title banner-subtitle text-white pt-2 pb-2">
+                        Island Paradise
+                    </h4>
+                </div>
+            </div>
             <div className="px-5 py-4 details-page-header">
-                <div className="d-flex justify-content-between">
+                <div className="details-page-header__container">
                     <h3 className="text-dark m-0 heading"> India's Island Paradise </h3>
-                    <h3 className="m-0"> &#8377; 15,000/ Person</h3>
+                    <h3 className="m-0 price"> &#8377; 15,000/ Person</h3>
                 </div>
                 <div className="mb-3 rating-stars">
                     <img src={filledStars} className="mr-2" alt="rating-stars" />
@@ -111,7 +106,11 @@ const Details = ({ isKnowMoreClicked }) => {
                     <img src={filledStars} className="mr-2" alt="rating-stars" />
                     <img src={emptyStars} alt="rating-stars" />
                 </div>
-                <div className="font-size-12">
+                <button type="button" 
+                    className="mobile-pdf-btn"> 
+                    Download Pdf 
+                </button>
+                <div className="font-size-12 breadcrumbs">
                     <span className="text-dark"> Home </span>
                     <span>{">"}</span>
                     <span className="text-dark"> Tours </span>
@@ -119,8 +118,8 @@ const Details = ({ isKnowMoreClicked }) => {
                     <span className="text-secondary"> Andaman - India's Island Paradise </span>
                 </div>
             </div>
-            <div className="mx-5">
-                <div className="mt-5 d-flex justify-content-between">
+            <div className="selected-tab-content mx-5">
+                <div className="tabs-container">
                     <div className="tabs d-flex justify-content-around">
                         {
                             tabs.map(({ id, name }, index) => {
@@ -248,7 +247,7 @@ const Details = ({ isKnowMoreClicked }) => {
                         {
                             similarTours.map(({ noOfDays, title, description, viewMoreButton }, index) => {
                                 return (
-                                    <div className="similar-tours-image__text p-5" key={index}>
+                                    <div className="similar-tours-image__text" key={index}>
                                         <p className="similar-tours-image__text__days">
                                             {noOfDays} days
                                         </p>

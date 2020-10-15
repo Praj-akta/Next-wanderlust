@@ -6,21 +6,20 @@ import portBlairImg from '../../../../assets/images/portBlair.png';
 import './index.scss';
 
 const DetailsTab = () => {
-
     const facilitiesIncludedImages = [
-    {
-        imgSrc: hotelsImg,
-        caption: "Hotel"
-    }, {
-        imgSrc: breakfastImg,
-        caption: "Breakfast"
-    }, {
-        imgSrc: portBlairImg,
-        caption: "Port Blair"
-    }, {
-        imgSrc: divingImg,
-        caption: "Scuba Diving"
-    }
+        {
+            imgSrc: hotelsImg,
+            caption: "Hotel"
+        }, {
+            imgSrc: breakfastImg,
+            caption: "Breakfast"
+        }, {
+            imgSrc: portBlairImg,
+            caption: "Port Blair"
+        }, {
+            imgSrc: divingImg,
+            caption: "Scuba Diving"
+        }
     ];
     const estimatedExpenses = [
         {
@@ -61,10 +60,10 @@ const DetailsTab = () => {
     ];
 
     return (
-        <div className="details-tab w-75">
+        <div className="details-tab">
             <div className="d-flex align-items-center header font-weight-normal pt-5 pb-1">
                 <div className="mr-3">About Andaman</div>
-                <div className="line" />
+                {/* <div className="line" /> */}
             </div>
             <div className="content text-secondary text-justify">
                 Is an Indian group of islands in the Bay of Bengal.
@@ -77,7 +76,7 @@ const DetailsTab = () => {
             <div className="facilities">
                 <div className="d-flex align-items-center header font-weight-normal pt-5 pb-2">
                     <div className="mr-3">Facilities included </div>
-                    <div className="line" />
+                    {/* <div className="line" /> */}
                 </div>
                 <div className="d-flex">
                     {
@@ -95,7 +94,7 @@ const DetailsTab = () => {
             <div className="estimated-expenses">
                 <div className="d-flex align-items-center header font-weight-normal pt-5 pb-3">
                     <div className="mr-3"> Estimated Expenses </div>
-                    <div className="line" />
+                    {/* <div className="line" /> */}
                 </div>
                 <div className="table">
                     <table border="1">
