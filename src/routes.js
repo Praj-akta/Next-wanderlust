@@ -6,6 +6,8 @@ import Details from '../src/screens/Details';
 import { Route, Switch } from 'react-router-dom';
 import NavigationBar from '../src/helpers/NavigationBar';
 import TourDestinations from '../src/screens/TourDestinations';
+import Footer from '../src/helpers/Footer'
+import MobileHeader from '../src/helpers/MobileHeader'
 
 export default function Main() {
     const [menuName, setMenuName] = useState("");
@@ -15,6 +17,14 @@ export default function Main() {
     return (
         <div className='home-page d-flex flex-row'>
             <NavigationBar
+                menuName={menuName}
+                isMenuOpen={isMenuOpen}
+                setMenuName={setMenuName}
+                setMenuState={setMenuState}
+                onClickKnowMore={onClickKnowMore}
+                isKnowMoreClicked={isKnowMoreClicked}
+            />
+            <MobileHeader 
                 menuName={menuName}
                 isMenuOpen={isMenuOpen}
                 setMenuName={setMenuName}
@@ -40,6 +50,7 @@ export default function Main() {
                     return <Faqs {...props} />
                 }} exact />
             </Switch>
+            <Footer />
         </div>
     );
 }   

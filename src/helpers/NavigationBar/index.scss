@@ -13,3 +13,14 @@
         left: -14px;
     }
 }
+
+@media screen and (max-width: 767px){
+    .navigation{
+        display: none;
+        padding: 0 !important;
+        margin: auto !important;
+        background-color: transparent !important;
+        box-shadow: transparent !important;
+    }
+}
+  

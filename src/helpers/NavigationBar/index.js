@@ -1,8 +1,7 @@
 import React from 'react';
-import Footer from '../Footer';
 import { Link } from 'react-router-dom';
-import MenuBar from './components/menuBar';
-import SocialNetworks from './components/socialNetworks';
+import MenuBar from '../menuBar';
+import SocialNetworks from '../socialNetworks';
 import NavigationMenu from './components/NavigationMenu';
 import logo from '../../assets/images/logo-with-title.png';
 import './index.scss';
@@ -16,7 +15,7 @@ const NavigationBar = ({
 }) => {
   return (
     <React.Fragment>
-      <div className="navigation shadow p-3 mb-5 bg-white rounded">
+      <div className="shadow p-3 mb-5 rounded navigation ">
         <div className="d-flex flex-column justify-content-between navigation__body">
           <div className="logo pt-4">
             <Link to="/">
@@ -34,7 +33,6 @@ const NavigationBar = ({
           />
           <SocialNetworks />
         </div>
-        <Footer />
       </div>
       {
         isMenuOpen &&

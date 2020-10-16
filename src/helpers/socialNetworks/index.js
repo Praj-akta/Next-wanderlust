@@ -20,12 +20,12 @@ const SocialNetworks = () => {
         }
     ]
     return (
-        <div className="mb-5 d-flex flex-column text-center color-black">
+        <div className="social-network">
             {
                 socialNetworks.map(({ link, className}, index) => {
                     return (
                         <a href={link} target="_blank" rel="noopener noreferrer" key={index}>
-                            <span className={`social-network-icon p-2 ${className}`} />
+                            <span className={`social-network__icon ${className}`} />
                         </a>
                     );
                 })

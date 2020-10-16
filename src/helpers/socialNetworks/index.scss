@@ -1,0 +1,29 @@
+.social-network{
+    display: flex;
+    flex-direction: column;
+    color: black;
+    margin-bottom: 3rem;
+    text-align: center;
+    &__icon{
+        padding: .5rem;
+        color: black;
+        cursor: pointer;
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .social-network{
+        flex-direction: row;
+        color: #fff;
+        margin-bottom: 0;
+        &__icon{
+            padding: 0;
+            color: #fff;
+            font-size: 24px;
+        }
+    }
+    .icon-instagram{
+        padding: 0 25px;
+    }
+}

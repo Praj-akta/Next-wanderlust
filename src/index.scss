@@ -26,3 +26,10 @@ h1, p, div,h2,img {
   padding: 0;
   margin: 0;
 }
+
+
+@media screen and (max-width: 767px){
+  .home-page{
+    flex-direction: column !important;
+  }
+}

@@ -1,0 +1,30 @@
+.mobile-header{
+    display: none;
+    z-index: 6;
+    background-color:#fff;
+    &__body{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+    &__logo{
+        width:100px;
+    }
+}
+.menu-options{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 20px;
+    width: 30%;
+    &__icons{
+        font-size: 26px;
+        font-weight: 800 !important;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .mobile-header{
+        display: block;
+    }
+}

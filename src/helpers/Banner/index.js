@@ -32,7 +32,7 @@ const Banner = ({
         </div>
       </div>
       <div className="banner-text">
-        <h1 className="display-1 text-white text-uppercase font-weight-bold"> andaman </h1>
+        <h1 className="banner-title text-white text-uppercase font-weight-bold"> andaman </h1>
         <h4 className="banner-subtitle text-white pt-2 pb-2"> Island Paradise </h4>
         <h6 className="banner-description">
           is an Indian group of islands in the Bay of Bengal.
@@ -42,7 +42,7 @@ const Banner = ({
           popular diving and snarkelling sites. over the years ,
           andaman is turning out to be one of the famous tourist destination
         </h6>
-        <div className="pt-3">
+        <div className="banner-button">
           <Button
             type="dark"
             title="Know More"
