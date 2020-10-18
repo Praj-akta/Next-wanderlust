@@ -1,0 +1,20 @@
+.breadcrumbs-container {
+    padding: 25px 0 25px 30px;
+    margin-bottom: 50px;
+    box-shadow: (0 12px 12px rgba(66, 66, 66, 0.11));
+    .font-size-12{
+        font-size: 12px;
+    }
+    .link {
+        color: #000;
+        font-weight: 700;
+    }   
+    @media screen and (max-width: 767px) {
+        box-shadow: none;
+        margin-bottom: 0;
+        .title {
+            display: none;
+        }
+    }
+}
+

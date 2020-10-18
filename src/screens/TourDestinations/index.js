@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Button from '../../helpers/Button';
 import PageHeader from '../../helpers/PageHeader';
 import RatingStars from '../../helpers/RatingStars';
+import Breadcrumbs from '../../helpers/Breadcrumbs';
 import bhutanImg from '../../assets/images/bhutan.png';
 import andamanImg from '../../assets/images/banner_.png';
 import tarkarliImg from '../../assets/images/tarkarli.png';
@@ -52,17 +53,8 @@ const TourDestination = () => {
 
     return (
         <div className="page-container tour-destinations-container w-100">
-            <div className="pt-4 pl-5 pb-4 about-us-header">
-                <h3 className="text-dark m-0"> Tour Destinations </h3>
-                <div className="font-size-12">
-                    <Link to="/">
-                        <span className="text-dark font-weight-bold"> Home </span>
-                    </Link>
-                    <span>{">"}</span>
-                    <span className="text-secondary"> Tour Destinations </span>
-                </div>
-            </div>
-            <div className="text-center mt-5">
+            <Breadcrumbs title="Tour Destinations" routeName="Tour Destinations" />
+            <div className="text-center">
                 <PageHeader title="tour destinations"/>
             </div>
             <div className="desktop-filters mb-5 mx-5">

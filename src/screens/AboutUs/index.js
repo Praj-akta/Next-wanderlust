@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PageHeader from '../../helpers/PageHeader';
+import Breadcrumbs from '../../helpers/Breadcrumbs';
 import FaqsQuestionList from '../../helpers/FaqsQuestionList';
 import quickBookingImg from '../../assets/images/quick-booking.png';
 import wonderfulPlacesImg from '../../assets/images/world-of-places.png';
@@ -54,17 +55,8 @@ const AboutUs = () => {
 
     return (
         <div className="page-container w-100">
-            <div className="pt-4 pl-5 pb-4 about-us-header">
-                <h3 className="text-dark m-0"> About Next Wanderlust </h3>
-                <div className="font-size-12">
-                    <Link to="/">
-                        <span className="text-dark"> Home </span>
-                    </Link>
-                    <span>{">"}</span>
-                    <span className="text-secondary"> About Us </span>
-                </div>
-            </div>
-            <div className="next-wanderlust-intro pt-5 text-center">
+            <Breadcrumbs title="About Next Wanderlust" routeName="About Us" />
+            <div className="next-wanderlust-intro text-center">
                 <PageHeader title="Next Wanderlust"/>
                 <div className="font-weight-normal pb-2">
                     Why choose Next Wanderlust?
