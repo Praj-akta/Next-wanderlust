@@ -1,5 +1,4 @@
 .tour-destinations-container {
-    margin-left: 100px;
     .desktop-filters {
         display: flex;
         margin: 0 auto;
@@ -82,7 +81,6 @@
     }
 
     @media screen and (max-width: 767px) {
-        margin-left: 0px;
         .desktop-filters{
             display: none
         }

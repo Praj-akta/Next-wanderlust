@@ -53,7 +53,7 @@ const AboutUs = () => {
     ];
 
     return (
-        <div className="about-us-container w-100">
+        <div className="page-container w-100">
             <div className="pt-4 pl-5 pb-4 about-us-header">
                 <h3 className="text-dark m-0"> About Next Wanderlust </h3>
                 <div className="font-size-12">
