@@ -319,8 +319,30 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
+    .banner-sidebar, .overlay-sidebar {
+        left: 0 !important; 
+        width: 100% !important;
+        height: 300px !important;
+    }
+    .banner-sidebar {
+        animation: none;
+        position: relative;
+    }
+    .overlay-sidebar {
+        position: absolute !important;
+    }
+    .details-page-header {
+        margin-top: 20px;
+        &__container {
+            flex-direction: column;
+            .price {
+                padding: 10px 0;
+            }
+        }
+    }
     .details-page-with-sidebar {
+        margin-left: 0px;
         .review-form-container {
             .leave-a-review, .opacity {
                 width: 100%;

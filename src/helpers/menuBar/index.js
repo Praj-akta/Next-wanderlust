@@ -62,11 +62,12 @@ const MenuBar = ({
   const navigateOnClick = (displayName) => {
     if (displayName === "About us") {
       history.push('/about');
-      setMenuState(!isMenuOpen);
     } else if (displayName === "Tour destination") {
       history.push('/tourDestinations');
-      setMenuState(!isMenuOpen);
+    } else if (displayName === `faq's`) {
+      history.push('/faqs');
     }
+    setMenuState(!isMenuOpen);
   }
   return (
     <div className="menuBar d-flex flex-column justify-content-center shadow">
