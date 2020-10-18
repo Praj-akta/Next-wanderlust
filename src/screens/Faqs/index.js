@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import PageHeader from '../../helpers/PageHeader';
 import Breadcrumbs from '../../helpers/Breadcrumbs';
 import FaqsQuestionList from '../../helpers/FaqsQuestionList';

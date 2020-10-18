@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import { Link } from 'react-router-dom';
 import Button from '../../helpers/Button';
 import PageHeader from '../../helpers/PageHeader';
 import RatingStars from '../../helpers/RatingStars';
