@@ -4,6 +4,7 @@ import PageHeader from '../../helpers/PageHeader';
 import Breadcrumbs from '../../helpers/Breadcrumbs';
 import FaqsQuestionList from '../../helpers/FaqsQuestionList';
 import quickBookingImg from '../../assets/images/quick-booking.png';
+import valueForMoneyImg from '../../assets/images/value-for-money.png';
 import wonderfulPlacesImg from '../../assets/images/world-of-places.png';
 import availablePlacesImg from '../../assets/images/always-available.png';
 import oneStopSolutionImg from '../../assets/images/one-stop-solution.png';
@@ -20,6 +21,7 @@ const AboutUs = () => {
             your loved one or a family tour; we got all your travel needs covered.`
         },
         {
+            imgSrc: valueForMoneyImg,
             title: "Value for your Money",
             description: `There is no better way to spend money than exploring the world. We at
             Next Wanderlust ensure that each penny you spend on...`
@@ -70,10 +72,12 @@ const AboutUs = () => {
             <div className="d-flex w-100 flex-wrap justify-content-around p-5">
                 {
                     options.map(({ imgSrc, title, description }, index) => {
+                        const imgClass = index % 2 === 0 ? "even-class" : "odd-class";
                         return (
                             <div className="text-center font-size-14 options-div pt-3 mb-5" key={index}>
                                 <div className="h-50">
-                                    <img src={imgSrc} alt={imgSrc ? title : null} className="h-100" />
+                                    <img src={imgSrc} alt={title}
+                                        className={`h-100 ${imgClass}`} />
                                 </div>
                                 <div className="text-dark font-weight-bold py-2">
                                     {title}
