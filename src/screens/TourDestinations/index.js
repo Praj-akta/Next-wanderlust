@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Button from '../../helpers/Button';
 import PageHeader from '../../helpers/PageHeader';
 import RatingStars from '../../helpers/RatingStars';
@@ -10,7 +10,6 @@ import bhandardaraImg from '../../assets/images/bhandardara.png';
 import './index.scss';
 
 const TourDestination = () => {
-    const [mobileFilterToggle, setToggleStatus] = useState(false);
     const destinations = [
         {
             id: 1,
@@ -89,49 +88,39 @@ const TourDestination = () => {
                     <div className="icon-search" />
                 </div>
             </div>
-            <div 
-                className="mobile-filters" 
-                onClick={_ => setToggleStatus(!mobileFilterToggle)}>
-                <div> filters </div>
-                <div className="icon-menu" />
+            <div className="mobile-filter-list">
+                <div className="dropdown">
+                    <select>
+                        <option selected disabled>Destination</option>
+                        <option>Demo</option>
+                        <option>Demo</option>
+                        <option>Demo</option>
+                    </select>
+                </div>
+                <div className="dropdown">
+                    <select>
+                        <option selected disabled>Select date</option>
+                        <option>Demo</option>
+                        <option>Demo</option>
+                        <option>Demo</option>
+                    </select>
+                </div>
+                <div className="dropdown">
+                    <select>
+                        <option selected disabled>Price range</option>
+                        <option>Demo</option>
+                        <option>Demo</option>
+                        <option>Demo</option>
+                    </select>
+                </div>
+                <div className="d-flex align-items-center position-relative">
+                    <div className="icon-search" />
+                    <input 
+                        type="text" 
+                        className="search"
+                        placeholder="Search by keyword" />
+                </div>
             </div>
-            {
-                mobileFilterToggle && (
-                    <div className="mobile-filter-list">
-                        <div className="dropdown">
-                            <select>
-                                <option selected disabled>Destination</option>
-                                <option>Demo</option>
-                                <option>Demo</option>
-                                <option>Demo</option>
-                            </select>
-                        </div>
-                        <div className="dropdown">
-                            <select>
-                                <option selected disabled>Select date</option>
-                                <option>Demo</option>
-                                <option>Demo</option>
-                                <option>Demo</option>
-                            </select>
-                        </div>
-                        <div className="dropdown">
-                            <select>
-                                <option selected disabled>Price range</option>
-                                <option>Demo</option>
-                                <option>Demo</option>
-                                <option>Demo</option>
-                            </select>
-                        </div>
-                        <div className="d-flex align-items-center position-relative">
-                            <div className="icon-search" />
-                            <input 
-                                type="text" 
-                                className="search"
-                                placeholder="Search by keyword" />
-                        </div>
-                    </div>
-                )
-            }
             <div className="destinations-list-container d-flex flex-wrap justify-content-center mt-3">
             {
                 destinations.map((item, index) => {

@@ -65,7 +65,7 @@
             }
         }
     }
-    .mobile-filters, .mobile-filter-list{
+    .mobile-filter-list{
         display: none;
     }
 
@@ -80,28 +80,17 @@
         }
     }
 
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 768px) {
         .desktop-filters{
             display: none
         }
-        .mobile-filters {
-            display: flex !important;
-            color: #fff;
-            padding: 15px;
-            margin: 0 15px;
-            font-size: 18px;
-            background: #000;
-            align-items: center;
-            text-transform: uppercase;
-            justify-content: space-between;
-        }
         .mobile-filter-list{
             display: block;
-            padding: 10px 10px 0 10px; 
-            border: 1px solid gray;
+            margin: 0 20px;
             .dropdown select {
                 width: 100%;
                 padding: 8px;
+                border-radius: 10px;
                 margin-bottom: 10px;
             }
             .icon-search {
@@ -112,10 +101,19 @@
             .search {
                 width: 100%;
                 padding: 8px 10px;
+                border-radius: 10px;
                 margin-bottom: 10px;
                 border: 1px solid rgb(104, 103, 103);
                 &::placeholder{
                     color: #000;
+                }
+            }
+        }
+        .destinations-list-container {
+            .destinations-list {
+                width: 90%;
+                .destination-img {
+                    width: auto;
                 }
             }
         }
