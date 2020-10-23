@@ -50,7 +50,11 @@ export default function Main() {
                     return <Faqs {...props} />
                 }} exact />
             </Switch>
-            <Footer />
+            <Footer
+                isMenuOpen={isMenuOpen}
+                setMenuName={setMenuName}
+                setMenuState={setMenuState}
+            />
         </div>
     );
 }   

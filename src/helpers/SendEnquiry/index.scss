@@ -1,0 +1,36 @@
+.send-enquiry-container{
+    position: unset !important;
+    
+    .send-enquiry{
+        position: unset !important;
+        width: unset !important; 
+        height:unset !important; 
+        color: unset !important; 
+        z-index: 0 !important;
+        &__header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .enquiry-icons{
+                font-size: 18px;
+                cursor: pointer;
+            }
+        }
+        label{
+            top: -15px !important;
+            background-color: #fff !important;
+        }
+        input,
+        textarea {
+            color: #000 !important;
+        }
+    }
+}
+
+@media screen and (max-width: 767px){
+    .enquiry-form{ 
+        z-index: 16;
+        position: fixed !important;
+        height: 100vh;
+    }
+}
