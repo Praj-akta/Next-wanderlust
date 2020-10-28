@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import Photos from './components/Photos';
 import Button from '../../helpers/Button';
 import Location from './components/Location';
+import Carousel from '../../helpers/Carousel';
 import Itinerary from './components/Itinerary';
 import DetailsTab from './components/DetailsTab';
 import RatingStars from '../../helpers/RatingStars';
-import reviewerIcon from '../../assets/images/logo.png';
 import filledStars from '../../assets/images/filled-stars.png';
 import emptyStars from '../../assets/images/unfilled-stars.png';
 import './index.scss';
@@ -19,28 +19,6 @@ const Details = () => {
         { id: 2, name: "Itinerary" },
         { id: 3, name: "Location" },
         { id: 4, name: "Photos" }
-    ];
-    const customerReviews = [
-        {
-            id: 1,
-            icon: reviewerIcon,
-            reviewDescription: `All I can say about my trip to Tarkarli is 
-                “AMAZING from start to finish”. The arrangements, the sights, 
-                the sounds (of the ocean), the photography, the team, the hotel, 
-                last but not the least the food.`,
-            reviewerName: `Alex D'souza`,
-            location: "Thane, Maharashtra"
-        },
-        {
-            id: 2,
-            icon: reviewerIcon,
-            reviewDescription: `All I can say about my trip to Tarkarli is 
-                “AMAZING from start to finish”. The arrangements, the sights, 
-                the sounds (of the ocean), the photography, the team, the hotel, 
-                last but not the least the food.`,
-            reviewerName: `Alex D'souza`,
-            location: "Thane, Maharashtra"
-        }
     ];
     const similarTours = [
         {
@@ -217,24 +195,7 @@ const Details = () => {
                     <div className="mr-3">Customers Reviews</div>
                     <div className="line" />
                 </div>
-                <div className="d-flex reviews-list text-center mt-5">
-                    {
-                        customerReviews.map((value, index) => {
-                            return (
-                                <div key={index} className="review px-5 py-4">
-                                    <img src={value.icon} alt="reviewer-icon" />
-                                    <p className="text-secondary pb-3 review-description">
-                                        {value.reviewDescription}
-                                    </p>
-                                    <p>{value.reviewerName}</p>
-                                    <p className="text-secondary">
-                                        {value.location}
-                                    </p>
-                                </div>
-                            );
-                        })
-                    }
-                </div>
+                <Carousel />
             </div>
             <div className="similar-tours-container">
                 <div className="d-flex align-items-center header font-weight-normal px-5">

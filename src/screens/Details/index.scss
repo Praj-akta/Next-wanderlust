@@ -140,26 +140,6 @@
         }
     }
 }
-.reviews-list {
-    width: 85%;
-    font-size: 15px;
-    margin: 0 auto;
-    .review {
-        border: 1px solid #6c757d;
-        img {
-            width: 100px;
-            position: relative;
-            top: -65px;
-            background: #fff;
-        }
-        &:not(:last-child) {
-            margin-right: 30px;
-        }
-        .review-description {
-            margin-top: -50px;
-        }
-    }
-}
 .similar-tours-image {
     width: 100%;
     height: 300px;
@@ -208,7 +188,6 @@
 .mobile-pdf-btn {
     display: none;
 }
-
 //when know more button is clicked
 .banner-sidebar {
     width: 340px;
