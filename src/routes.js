@@ -3,7 +3,7 @@ import Home from '../src/screens/Home';
 import Faqs from '../src/screens/Faqs';
 import About from '../src/screens/AboutUs';
 import Details from '../src/screens/Details';
-import { Route, Switch } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import NavigationBar from '../src/helpers/NavigationBar';
 import TourDestinations from '../src/screens/TourDestinations';
 import Footer from '../src/helpers/Footer'

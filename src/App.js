@@ -5,7 +5,7 @@ import './App.scss';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Next-wanderlust">
       <Routes />
     </BrowserRouter>
   )
