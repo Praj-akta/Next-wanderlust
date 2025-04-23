@@ -1,0 +1,36 @@
+.photos-gallery-wrapper {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  
+    .gallery-title {
+      font-size: 2rem;
+      color: #0f766e;
+      margin-bottom: 2rem;
+      font-weight: bold;
+    }
+  
+    .masonry-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 1.5rem;
+    }
+  
+    .masonry-item {
+      overflow: hidden;
+      border-radius: 12px;
+      transition: transform 0.3s ease;
+  
+      img.gallery-img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 12px;
+        transition: transform 0.4s ease;
+        cursor: pointer;
+
+      }
+    }
+  }
+  

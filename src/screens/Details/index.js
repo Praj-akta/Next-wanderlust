@@ -84,10 +84,6 @@ const Details = () => {
                     <img src={filledStars} className="mr-2" alt="rating-stars" />
                     <img src={emptyStars} alt="rating-stars" />
                 </div>
-                <button type="button" 
-                    className="mobile-pdf-btn"> 
-                    Download Pdf 
-                </button>
                 <div className="font-size-12 breadcrumbs">
                     <span className="text-dark"> Home </span>
                     <span>{">"}</span>
@@ -110,7 +106,6 @@ const Details = () => {
                             })
                         }
                     </div>
-                    <button type="button" className="pdf-btn"> Download Pdf </button>
                 </div>
                 {
                     getSelectedTabComponent(selectedTab)

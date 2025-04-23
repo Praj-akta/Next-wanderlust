@@ -9,7 +9,7 @@ import tarkarliImg from '../../assets/images/tarkarli.png';
 import bhandardaraImg from '../../assets/images/bhandardara.png';
 import './index.scss';
 
-const TourDestination = () => {
+const TourDestination = ({history}) => {
     const destinations = [
         {
             id: 1,
@@ -140,7 +140,7 @@ const TourDestination = () => {
                                 <div className="title w-75">{item.title}</div>
                                 <div className="description w-75">{item.description}</div>
                             </div>
-                            <Button title="view detail" className="view-detail-btn" />
+                            <Button title="view detail" className="view-detail-btn" onClick={_ => history.push('/details')} />
                         </div>
                     );
                 })
